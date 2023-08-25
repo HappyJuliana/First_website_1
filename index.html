@@ -1,99 +1,133 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>KMarketer</title>
     <meta charset="UTF-8">
+    <title>KMarketer</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <style>
-        .main-page {
+        body {
+            font-family: 'Montserrat';
             background-color: rgba(0, 0, 0, 0.1);
             background-image: url("background.png");
             background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
+            background-repeat: no-repeat;
             color: white;
             text-align: center;
-            min-height: 940px;
-            min-width: 1440px;
-            margin: 0;
-            padding: 0;
         }
 
-        .heading {
-            font-family: "Lucida Console", "Courier New", monospace;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1050px;
+            padding: 23px 164px 23px 136px;
+            align-items: center;
+            gap: 462px;
         }
 
-        .top-banner-wrapper {
-            padding-top: 330px;
-            max-width: 800px;
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 136px;
+            font-weight: 700;
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            font-style: normal;
+            line-height: 32px;
+            letter-spacing: 0.1px;
+        }
+
+        .action-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav {
+            display: flex;
+
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 21px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            text-align: center;
+            font-style: normal;
+            line-height: 24px;
+        }
+
+        .action-bar {
+            display: flex;
+        }
+
+        .action-bar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .action-bar a {
+            text-decoration: none;
+        }
+
+        .top-banner {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1050px;
+            flex-direction: column;
+            align-items: center;
             margin: 0 auto;
+            padding: 40px 0px;
+            gap: 40px;
         }
 
         .main-heading {
-            font-size: 70px;
-            line-height: 140%;
+            font-size: 58px;
+            line-height: 80px;
+            max-width: 550px;
+            font-style: normal;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+            display: flex;
+            justify-content: center;
+            margin-top: 120px;
         }
 
         .sub-heading {
-            font-size: 25px;
-            line-height: 160%;
-        }
-
-        .kmarketer-link {
-            position: fixed;
-            top: 38px;
-            left: 300px;
-            font-weight: bold;
-            transform: translateX(-50%);
-            font-size: 30px;
-            margin-left: 20px;
-            margin-right: 20px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .top-nav {
-            position: fixed;
-            top: 38px;
-            right: 275px;
-        }
-
-        .top-nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .top-nav li {
-            display: inline-block;
-            margin-left: 40px;
-        }
-
-        .top-nav li:first-child {
-            margin-left: 0;
-        }
-
-        .top-nav a {
-            text-decoration: none;
-            color: white;
             font-size: 20px;
-            font-weight: bold;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 30px;
+            letter-spacing: 0.2px;
+            max-width: 530px;
         }
 
         .button-link {
             display: inline-block;
             margin: 10px;
-            padding: 20px 36px 10px 36px;
+            padding: 10px 36px;
+            align-items: center;
             color: white;
-            height: 28px;
-            width: 160px;
             border-radius: 37px;
-            font-family: "Lucida Console", "Courier New", monospace;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 14px;
+            font-weight: 700;
             text-align: center;
             text-decoration: none;
             cursor: pointer;
+            line-height: 28px;
+            letter-spacing: 0.2px;
         }
 
         .quote-button {
@@ -109,28 +143,35 @@
 </head>
 
 <body>
-    <div class="main-page">
-        <div class="top-banner-wrapper">
 
+    <div class="top-banner">
+        <header class="header">
+            <a href="#" class="logo">KMarketer</a>
+            <div class="action-container">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="action-bar">
+                    <ul>
+                        <li><a href="#">&#128270;</a></li>
+                        <li><a href="#">&#128722;</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container" style="max-width: 1050px;">
             <h1 class="heading main-heading">We Take Care of the Future</h1>
             <h4 class="heading sub-heading">We know how large objects will act, but things on a small scale just do not act that way.</h4>
-
-            <a href="#" class="kmarketer-link">KMarketer</a>
-
-            <nav class="top-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">&#128270;</a></li>
-                    <li><a href="#">&#128722;</a></li>
-
-                </ul>
-            </nav>
-
-            <a href="#" class="button-link quote-button">Get Quote Now</a>
-            <a href="#" class="button-link learn-button">Learn More</a>
+            <div>
+                <a href="#" class="button-link quote-button">Get Quote Now</a>
+                <a href="#" class="button-link learn-button">Learn More</a>
+            </div>
         </div>
     </div>
 </body>
