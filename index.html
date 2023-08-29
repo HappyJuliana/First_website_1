@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>KMarketer</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <style>
@@ -149,6 +150,44 @@
         .button--primary {
             background-color: #FFA62B;
             border: #FFA62B;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 570px) {
+            body {
+                background-position: center;
+            }
+
+            .top-banner__header {
+                flex-direction: column;
+            }
+
+            .header__go-home {
+                font-size: 1.5em;
+            }
+
+            .header__nav {
+                margin: 0 auto;
+                font-size: 0.8em;
+                margin: 10px;
+            }
+
+            .header__actions {
+                margin: 0 auto;
+            }
+
+            .main-heading {
+                font-size: 2em;
+                line-height: 40px;
+            }
+
+            .sub-heading {
+                font-size: 1em;
+                line-height: 20px;
+            }
+
+            .button {
+                line-height: 15px;
+            }
         }
     </style>
 </head>
