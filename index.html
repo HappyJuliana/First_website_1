@@ -1,179 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>KMarketer</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <style>
         body {
             font-family: 'Montserrat';
-            background-color: rgba(0, 0, 0, 0.1);
-            background-image: url("background.png");
-            background-size: cover;
-            background-repeat: no-repeat;
+            margin: 0;
             color: white;
-            text-align: center;
+            font-size: 14px;
         }
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1050px;
-            padding: 23px 164px 23px 136px;
-            align-items: center;
-            gap: 462px;
+        ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-left: 136px;
-            font-weight: 700;
-            font-size: 24px;
-            color: white;
+        button {
+            padding: 0;
+        }
+
+        a {
+            color: inherit;
             text-decoration: none;
-            font-style: normal;
+            letter-spacing: 0.2px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+
+        .top-banner {
+            padding-top: 40px;
+            background-image: url("cover.svg");
+            background-size: cover;
+            padding-bottom: 120px;
+            position: relative;
+            z-index: 1;
+            background-position-x: center;
+        }
+
+        .top-banner::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .top-banner__header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 160px;
+            width: 100%;
+            position: sticky;
+        }
+
+        .header__go-home {
+            font-size: 25px;
+            font-weight: 700;
             line-height: 32px;
             letter-spacing: 0.1px;
         }
 
-        .action-container {
+        .header__nav {
+            margin-left: auto;
+        }
+
+        .header__nav .nav__list {
             display: flex;
             gap: 20px;
         }
 
-        .nav {
+        .header__actions {
+            margin-left: 40px;
             display: flex;
-
+            align-items: center;
+            gap: 15px;
         }
 
-        .nav ul {
-            list-style: none;
-            display: flex;
-            gap: 21px;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: white;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.2px;
-            text-align: center;
-            font-style: normal;
-            line-height: 24px;
-        }
-
-        .action-bar {
+        .actions_item {
+            background: transparent;
+            border: none;
             display: flex;
         }
 
-        .action-bar ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
+        .item_icon {
+            width: 16px;
+            height: 16px;
         }
 
-        .action-bar a {
-            text-decoration: none;
-        }
-
-        .top-banner {
-            display: flex;
-            flex-direction: column;
+        .top-banner__content {
+            max-width: 570px;
+            margin: 0 auto;
         }
 
         .container {
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 0 15px;
             display: flex;
-            max-width: 1050px;
             flex-direction: column;
             align-items: center;
-            margin: 0 auto;
-            padding: 40px 0px;
-            gap: 40px;
+        }
+
+        .heading {
+            text-align: center;
         }
 
         .main-heading {
             font-size: 58px;
             line-height: 80px;
-            max-width: 550px;
-            font-style: normal;
             font-weight: 800;
             letter-spacing: 0.2px;
-            display: flex;
-            justify-content: center;
-            margin-top: 120px;
         }
 
         .sub-heading {
             font-size: 20px;
-            font-style: normal;
             font-weight: 500;
             line-height: 30px;
             letter-spacing: 0.2px;
-            max-width: 530px;
         }
 
-        .button-link {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 36px;
-            align-items: center;
+        .top-banner__actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 10px 35px;
+            line-height: 26px;
+            border-radius: 40px;
+            border: 1px solid white;
             color: white;
-            border-radius: 37px;
-            font-size: 14px;
-            font-weight: 700;
-            text-align: center;
-            text-decoration: none;
+            background: transparent;
             cursor: pointer;
-            line-height: 28px;
             letter-spacing: 0.2px;
+            font-weight: 700;
+            font-family: 'Montserrat';
         }
 
-        .quote-button {
+        .button--primary {
             background-color: #FFA62B;
-            border: none;
+            border: #FFA62B;
         }
 
-        .learn-button {
-            background-color: transparent;
-            border: 2px solid white;
+        @media screen and (min-width: 320px) and (max-width: 570px) {
+            body {
+                background-position: center;
+            }
+
+            .top-banner__header {
+                flex-direction: column;
+            }
+
+            .header__go-home {
+                font-size: 1.5em;
+            }
+
+            .header__nav {
+                margin: 0 auto;
+                font-size: 0.8em;
+                margin: 10px;
+            }
+
+            .header__actions {
+                margin: 0 auto;
+            }
+
+            .main-heading {
+                font-size: 2em;
+                line-height: 40px;
+            }
+
+            .sub-heading {
+                font-size: 1em;
+                line-height: 20px;
+            }
+
+            .button {
+                line-height: 15px;
+            }
         }
     </style>
 </head>
 
 <body>
+    <section class="top-banner">
+        <div class="container">
+            <header class="top-banner__header">
+                <a href="#" class="header__go-home">KMarketer</a>
 
-    <div class="top-banner">
-        <header class="header">
-            <a href="#" class="logo">KMarketer</a>
-            <div class="action-container">
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#">Home</a></li>
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="item"><a href="#">Home</a></li>
                         <li><a href="#">Product</a></li>
                         <li><a href="#">Pricing</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
-                <nav class="action-bar">
-                    <ul>
-                        <li><a href="#">&#128270;</a></li>
-                        <li><a href="#">&#128722;</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+                <ul class="header__actions">
+                    <li><button class="actions_item"><img src="icn search.icn-xs.png" class="item_icon" alt="search"></button></li>
+                    <li><button class="actions_item"><img src="icn shopping-cart.icn-xs.png" class="item_icon" alt="shopping cart"></button></li>
+                </ul>
+            </header>
 
-        <div class="container" style="max-width: 1050px;">
-            <h1 class="heading main-heading">We Take Care of the Future</h1>
-            <h4 class="heading sub-heading">We know how large objects will act, but things on a small scale just do not act that way.</h4>
-            <div>
-                <a href="#" class="button-link quote-button">Get Quote Now</a>
-                <a href="#" class="button-link learn-button">Learn More</a>
+            <div class="top-banner__content">
+                <h1 class="heading main-heading">We Take Care of the Future</h1>
+                <h4 class="heading sub-heading">We know how large objects will act, but things on a small scale just do not act that way.</h4>
+                <div class="top-banner__actions">
+                    <button class="button button--primary">Get Quote Now</button>
+                    <button class="button button--secondary">Learn More</button>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
 </body>
 
 </html>
