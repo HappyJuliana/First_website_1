@@ -152,6 +152,76 @@
             border: #FFA62B;
         }
 
+        .why-us {
+            background-color: #252B42;
+        }
+
+        .container__heading {
+            margin-top: 145px;
+            margin-bottom: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .heading__why-us {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+        }
+
+        .paragraph__why-us {
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            max-width: 470px;
+        }
+
+        .why-us__content {
+            color: black;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 330px 330px 330px;
+            grid-template-rows: 195px 195px;
+            margin-bottom: 100px;
+        }
+
+        .why-us__content>div {
+            background-color: white;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            padding: 35px 40px;
+            gap: 15px;
+        }
+
+        .card__img {
+            height: 40px;
+            width: 40px;
+            margin-right: 15px;
+        }
+
+        .card__header {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+        }
+
+        .card__content {
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+        }
+
         @media screen and (min-width: 320px) and (max-width: 570px) {
             body {
                 background-position: center;
@@ -187,6 +257,7 @@
 
             .button {
                 line-height: 15px;
+                font-size: 0.8em;
             }
         }
     </style>
@@ -207,20 +278,83 @@
                     </ul>
                 </nav>
                 <ul class="header__actions">
-                    <li><button class="actions_item"><img src="icn search.icn-xs.png" class="item_icon" alt="search"></button></li>
-                    <li><button class="actions_item"><img src="icn shopping-cart.icn-xs.png" class="item_icon" alt="shopping cart"></button></li>
+                    <li><button class="actions_item"><img src="icn search.icn-xs.png" class="item_icon"
+                                alt="search"></button></li>
+                    <li><button class="actions_item"><img src="icn shopping-cart.icn-xs.png" class="item_icon"
+                                alt="shopping cart"></button></li>
                 </ul>
             </header>
 
             <div class="top-banner__content">
                 <h1 class="heading main-heading">We Take Care of the Future</h1>
-                <h4 class="heading sub-heading">We know how large objects will act, but things on a small scale just do not act that way.</h4>
+                <h4 class="heading sub-heading">We know how large objects will act, but things on a small scale just do
+                    not act that way.</h4>
                 <div class="top-banner__actions">
                     <button class="button button--primary">Get Quote Now</button>
                     <button class="button button--secondary">Learn More</button>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="why-us">
+
+        <div class="container">
+
+            <div class="container__heading">
+                <h2 class="heading__why-us">Why Choose Us</h2>
+                <p class="paragraph__why-us">Problems trying to resolve the conflict between
+                    the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+
+            <div class="why-us__content">
+
+                <div class="card">
+                    <h5 class="card__header"><img class="card__img" src="img\suitcase-dig-marketing.svg"
+                            alt="suitcase icon">Digital Marketing</h5>
+                    <p class="card__content">the quick fox jumps over the lazy dog the quick fox jumps over the lazy
+                        dog</p>
+                </div>
+
+                <div class="card">
+                    <h5 class="card__header"><img class="card__img" src="img\booth-dig-marketing.svg"
+                            alt="booth icon">Digital Marketing</h5>
+                    <p class="card__content">the quick fox jumps over the lazy dog the quick fox jumps over the lazy
+                        dog</p>
+                </div>
+
+                <div class="card">
+                    <h5 class="card__header"><img class="card__img" src="img\notebook-business.svg"
+                            alt="notebook icon">Business Growing</h5>
+                    <p class="card__content">the quick fox jumps over the lazy dog the quick fox jumps over the lazy
+                        dog</p>
+                </div>
+
+                <div class="card">
+                    <h5 class="card__header"><img class="card__img" src="img\people-firms.svg"
+                            alt="people icon">National top 50 firms</h5>
+                    <p class="card__content">the quick fox jumps over the lazy dog the quick fox jumps over the lazy
+                        dog</p>
+                </div>
+
+                <div class="card">
+                    <h5 class="card__header"><img class="card__img" src="img\chart-firms.svg"
+                            alt="chart icon">National top 50 firms</h5>
+                    <p class="card__content">the quick fox jumps over the lazy dog the quick fox jumps over the lazy
+                        dog</p>
+                </div>
+
+                <div class="card">
+                    <h5 class="card__header"><img class="card__img" src="img\sign-web-development.svg"
+                            alt="sign icon">Web Development</h5>
+                    <p class="card__content">the quick fox jumps over the lazy dog the quick fox jumps over the lazy
+                        dog</p>
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
 </body>
