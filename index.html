@@ -112,6 +112,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @media screen and (max-width: 768px) {
+                padding: 0 40px;
+            }
         }
 
         .heading {
@@ -236,6 +240,10 @@
 
         .footer__secondary {
             background-color: var(--footer-secondary_bg);
+
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
         }
 
         .footer__content {
@@ -246,11 +254,23 @@
             grid-template-areas: 'logo socials'
                                 'divider divider'
                                 'main main';
+
+            @media screen and (max-width: 768px) {
+            grid-template-areas: 'logo'
+                                'socials'
+                                'main';
+            gap: 50px;
+            padding: 50px 0 70px;
+            }
         }
 
         .footer__logo {
             grid-area: logo;
-            margin: 55px 0;
+            margin: 55px 0; 
+            
+            @media screen and (max-width: 768px) {
+                margin: 0;
+            }
         }
 
         .logo__img {
@@ -264,6 +284,11 @@
             gap: 20px;
             align-items: center;
             justify-self: end;
+
+            @media screen and (max-width: 768px) {
+                margin: 0;
+                justify-self: initial;
+            }
         }
 
         .socials__link {
@@ -277,6 +302,10 @@
             height: 1px;
             background-color: var(--footer-div-bg);
             margin: 0;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
 
         .footer__main {
@@ -284,11 +313,20 @@
             display: flex;
             gap: 30px;
             margin: 70px 0;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                margin: 0;
+            }
         }
 
         .footer__nav {
             display: flex;
             gap: 30px;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
         }
 
         .footer__nav .nav__block {
@@ -334,7 +372,7 @@
         }
 
         input::placeholder {
-            color: #BDBDBD;
+            color: var(--footer-nav-link-color);
             font-size: 14px;
         }
 
@@ -347,10 +385,9 @@
             padding: 0 22px;
             cursor: pointer;           
         }
-
         .subscription__message {
             font-size: 12px;
-            color: #BDBDBD;
+            color: var(--footer-nav-link-color);
         }
 
         @media screen and (min-width: 320px) and (max-width: 570px) {
@@ -359,7 +396,7 @@
             }
 
             .top-banner__header {
-                flex-direction: column;
+                flex-direction: column; 
             }
 
             .header__go-home {
@@ -559,7 +596,7 @@
                                 <input class="form__input" type="email" placeholder="Your Email">
                                 <input class="form__submit" type="submit" value="Subscribe">
                             </form>
-                            <p>Lorem impsum dolor amit</p>
+                            <p  class="subscription__message">Lorem impsum dolor amit</p>
                         </div>
                     </div>
                 </div>
@@ -567,7 +604,7 @@
         </section>
         <section class="footer__secondary">
             <div class="container">
-                <p class="subscription__message">Made With Love By Figmaland All Right Reserved</p>
+                <p>Made With Love By Figmaland All Right Reserved</p>
             </div>
         </section>
     </footer>
