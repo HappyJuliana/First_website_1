@@ -383,10 +383,24 @@
 
         .team .container__heading {
             margin: 80px 0;
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 45px;
+            }
         }
 
         .team .heading__section {
             text-transform: initial;
+
+            @media screen and (max-width: 768px) {
+                max-width: 205px;
+            }
+        }
+
+        .team .paragraph__section {
+            @media screen and (max-width: 768px) {
+                max-width: 265px;
+            }
         }
 
         .team__content {
@@ -395,7 +409,13 @@
             gap: 30px;
             grid-template-columns: 325px 325px 325px;
             grid-template-rows: 370px;
-            margin-bottom: 80px;            
+            margin-bottom: 80px;
+
+            @media screen and (max-width: 768px) {
+                grid-template-columns: 325px;
+                grid-template-rows: 370px 370px 370px;
+                margin-bottom: 95px;
+            }
         }
 
         .team__content>div {
@@ -410,6 +430,10 @@
         .card__photo {
             width: 325px;
             height: 230px;
+
+            @media screen and (max-width: 768px) {
+                width: 285px;
+            }
         }
 
         .card__info {
@@ -421,8 +445,8 @@
         }
 
         .info__social-media {
-            display: flex; 
-            align-items: center;         
+            display: flex;
+            align-items: center;
             gap: 15px;
         }
 
@@ -464,7 +488,7 @@
         .footer__content {
             width: 100%;
             display: grid;
-            grid-template-columns: repeat (2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
             grid-template-areas: 'logo socials'
                 'divider divider'
@@ -788,13 +812,16 @@
                         <p class="info__subheader">CEO</p>
                         <ul class="info__social-media">
                             <li>
-                                <a href="#"><img src="icons/facebook light-blue.svg" class="social-media__icon" alt="Facebook"></a>
+                                <a href="#"><img src="icons/facebook light-blue.svg" class="social-media__icon"
+                                        alt="Facebook"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="icons/instagram light-blue.svg" class="social-media__icon" alt="Instagram"></a>
+                                <a href="#"><img src="icons/instagram light-blue.svg" class="social-media__icon"
+                                        alt="Instagram"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="icons/twitter light-blue.svg" class="social-media__icon" alt="Twitter"></a>
+                                <a href="#"><img src="icons/twitter light-blue.svg" class="social-media__icon"
+                                        alt="Twitter"></a>
                             </li>
                         </ul>
                     </div>
@@ -807,13 +834,16 @@
                         <p class="info__subheader">Consultant</p>
                         <ul class="info__social-media">
                             <li>
-                                <a href="#"><img src="icons/facebook light-blue.svg" class="social-media__icon" alt="Facebook"></a>
+                                <a href="#"><img src="icons/facebook light-blue.svg" class="social-media__icon"
+                                        alt="Facebook"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="icons/instagram light-blue.svg" class="social-media__icon" alt="Instagram"></a>
+                                <a href="#"><img src="icons/instagram light-blue.svg" class="social-media__icon"
+                                        alt="Instagram"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="icons/twitter light-blue.svg" class="social-media__icon" alt="Twitter"></a>
+                                <a href="#"><img src="icons/twitter light-blue.svg" class="social-media__icon"
+                                        alt="Twitter"></a>
                             </li>
                         </ul>
                     </div>
@@ -826,25 +856,21 @@
                         <p class="info__subheader">CO Founder</p>
                         <ul class="info__social-media">
                             <li>
-                                <a href="#"><img src="icons/facebook light-blue.svg" class="social-media__icon" alt="Facebook"></a>
+                                <a href="#"><img src="icons/facebook light-blue.svg" class="social-media__icon"
+                                        alt="Facebook"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="icons/instagram light-blue.svg" class="social-media__icon" alt="Instagram"></a>
+                                <a href="#"><img src="icons/instagram light-blue.svg" class="social-media__icon"
+                                        alt="Instagram"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="icons/twitter light-blue.svg" class="social-media__icon" alt="Twitter"></a>
+                                <a href="#"><img src="icons/twitter light-blue.svg" class="social-media__icon"
+                                        alt="Twitter"></a>
                             </li>
                         </ul>
                     </div>
                 </div>
-
-
-
-
             </div>
-
-
-
         </div>
     </section>
 
