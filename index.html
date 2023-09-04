@@ -8,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <style>
         body {
+            --page-bg: #252B42;
             --btn-primary-bg: #FFA62B;
             font-family: 'Montserrat';
             margin: 0;
@@ -187,7 +188,7 @@
         }
 
         .why-us {
-            background-color: #252B42;
+            background-color: var(--page-bg);
         }
 
         .container__heading {
@@ -204,7 +205,7 @@
             }
         }
 
-        .heading__why-us {
+        .heading__section {
             font-size: 40px;
             font-weight: 700;
             line-height: 57px;
@@ -213,7 +214,7 @@
             margin: 0 auto;           
         }
 
-        .paragraph__why-us {
+        .paragraph__section {
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.2px;
@@ -275,14 +276,84 @@
             font-weight: 500;
             line-height: 20px;
             letter-spacing: 0.2px;
+            margin: 0;
         }
 
-        .footer {
-            --footer-bg: #252B42;
+        .feedback {
+            background-color: var(--page-bg);
+        }
+
+        .feedback .container__heading {
+            margin: 80px 0;
+        }
+
+        .feedback .heading__section {
+            text-transform: initial;
+        }
+
+        .feedback__content {
+            color: black;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 325px 325px 325px;
+            grid-template-rows: 245px;
+            margin-bottom: 80px;                     
+        }
+
+        .feedback__content>div {
+            background-color: white;
+        }
+
+        .feedback .card {
+            padding: 30px 35px;                 
+            gap: 20px;    
+            border-radius: 5px;            
+        }       
+        
+        .content__reviewer {
+            display: grid;            
+            grid-template-columns: 50px 95px;
+            grid-template-rows: 10px 10px;
+            grid-template-areas: 'image link'
+                                 'image profession';  
+            column-gap: 15px;                                
+        }
+
+        .star__img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .feedback .card__content {
+            color: #737373;
+            font-weight: 600;
+            line-height: 24px;             
+        }
+
+        .reviewer__img {
+            grid-area: image;
+            width: 50px;
+            height: 50px;
+        }
+
+        .reviewer__link {
+            grid-area: link;            
+            color: var(--btn-primary-bg);
+            font-weight: 600;
+            line-height: 24px; 
+        }
+
+        .reviewer__profession {
+            grid-area: profession;
+            font-weight: 600;
+            line-height: 24px;
+        }        
+
+        .footer {            
             --footer-secondary_bg: #16697A;
             --footer-div-bg: #364067;
             --footer-nav-link-color: #BDBDBD;
-            background-color: var(--footer-bg);
+            background-color: var(--page-bg);
         }
 
         .footer__secondary {
@@ -482,8 +553,8 @@
         <div class="container">
 
             <div class="container__heading">
-                <h2 class="heading__why-us">Why Choose Us</h2>
-                <p class="paragraph__why-us">Problems trying to resolve the conflict between
+                <h2 class="heading__section">Why Choose Us</h2>
+                <p class="paragraph__section">Problems trying to resolve the conflict between
                     the two major realms of Classical physics: Newtonian mechanics</p>
             </div>
 
@@ -535,6 +606,69 @@
 
         </div>
 
+    </section>
+
+    <section class="feedback">
+        <div class="container">
+
+            <div class="container__heading">
+                <h2 class="heading__section">What Clients Say</h2>
+                <p class="paragraph__section">Problems trying to resolve the conflict between
+                    the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+
+            <div class="feedback__content">
+
+                <div class="card">  
+                    <div class="card__stars">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon"> 
+                        <img src="icons\star.svg" class="star__img" alt="full star icon"> 
+                        <img src="icons\star.svg" class="star__img" alt="full star icon"> 
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon"> 
+                    </div>
+                   
+                    <p class="card__content">Slate helps you see how many more days you need to work to reach your financial goal.</p>
+                    <div class="content__reviewer">
+                    <img class="reviewer__img" src="icons/girl.svg" alt="girl icon">                    
+                    <a class="reviewer__link" href="#">Regina Miles</a>
+                        <p class="reviewer__profession">Designer</p>                                                      
+                </div>
+            </div>
+
+            <div class="card">  
+                <div class="card__stars">
+                    <img src="icons\star.svg" class="star__img" alt="full star icon"> 
+                    <img src="icons\star.svg" class="star__img" alt="full star icon"> 
+                    <img src="icons\star.svg" class="star__img" alt="full star icon"> 
+                    <img src="icons\star.svg" class="star__img" alt="full star icon">
+                    <img src="icons\empty-star.svg" class="star__img" alt="empty star icon"> 
+                </div>
+               
+                <p class="card__content">Slate helps you see how many more days you need to work to reach your financial goal.</p>
+                <div class="content__reviewer">
+                <img class="reviewer__img" src="icons/woman.svg" alt="woman icon">                    
+                <a class="reviewer__link" href="#">Regina Miles</a>
+                    <p class="reviewer__profession">Designer</p>                                                      
+            </div>
+        </div>
+
+        <div class="card">  
+            <div class="card__stars">
+                <img src="icons\star.svg" class="star__img" alt="full star icon"> 
+                <img src="icons\star.svg" class="star__img" alt="full star icon"> 
+                <img src="icons\star.svg" class="star__img" alt="full star icon"> 
+                <img src="icons\star.svg" class="star__img" alt="full star icon">
+                <img src="icons\empty-star.svg" class="star__img" alt="empty star icon"> 
+            </div>
+           
+            <p class="card__content">Slate helps you see how many more days you need to work to reach your financial goal.</p>
+            <div class="content__reviewer">
+            <img class="reviewer__img" src="icons/man.svg" alt="man icon">                    
+            <a class="reviewer__link" href="#">Regina Miles</a>
+                <p class="reviewer__profession">Designer</p>                                                      
+        </div>
+    </div>
     </section>
 
     <footer class="footer">
