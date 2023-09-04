@@ -70,7 +70,7 @@
                 flex-direction: column;
                 gap: 15px;
             }
-        }        
+        }
 
         .header__nav {
             margin-left: auto;
@@ -149,7 +149,7 @@
             font-size: 20px;
             font-weight: 500;
             line-height: 30px;
-            letter-spacing: 0.2px;            
+            letter-spacing: 0.2px;
         }
 
         .top-banner__actions {
@@ -211,7 +211,7 @@
             line-height: 57px;
             letter-spacing: 0.2px;
             text-transform: uppercase;
-            margin: 0 auto;           
+            margin: 0 auto;
         }
 
         .paragraph__section {
@@ -269,7 +269,7 @@
             font-size: 16px;
             font-weight: 700;
             line-height: 24px;
-            letter-spacing: 0.1px;            
+            letter-spacing: 0.1px;
         }
 
         .card__content {
@@ -284,8 +284,8 @@
         }
 
         .feedback .container__heading {
-            margin: 80px 0;   
-            
+            margin: 80px 0;
+
             @media screen and (max-width: 768px) {
                 margin-bottom: 60px;
             }
@@ -299,7 +299,7 @@
             }
         }
 
-        .feedback .paragraph__section {         
+        .feedback .paragraph__section {
             @media screen and (max-width: 768px) {
                 max-width: 265px;
             }
@@ -311,8 +311,8 @@
             gap: 30px;
             grid-template-columns: 325px 325px 325px;
             grid-template-rows: 245px;
-            margin-bottom: 80px;   
-            
+            margin-bottom: 80px;
+
             @media screen and (max-width: 768px) {
                 grid-template-columns: 325px;
                 grid-template-rows: 245px 245px 245px;
@@ -325,15 +325,15 @@
         }
 
         .feedback .card {
-            padding: 30px 35px;                 
-            gap: 20px;    
-            border-radius: 5px;  
+            padding: 30px 35px;
+            gap: 20px;
+            border-radius: 5px;
 
             @media screen and (max-width: 768px) {
                 gap: 10px;
-            }            
-        }      
-        
+            }
+        }
+
         .star__img {
             width: 22px;
             height: 22px;
@@ -342,21 +342,21 @@
         .feedback .card__content {
             color: #737373;
             font-weight: 600;
-            line-height: 24px;             
+            line-height: 24px;
         }
-        
+
         .content__reviewer {
-            display: grid;            
+            display: grid;
             grid-template-columns: 50px 95px;
             grid-template-rows: 10px 10px;
             grid-template-areas: 'image link'
-                                 'image profession';  
-            column-gap: 15px;  
-            
+                'image profession';
+            column-gap: 15px;
+
             @media screen and (max-width: 768px) {
                 grid-template-rows: 5px 5px;
             }
-        }       
+        }
 
         .reviewer__img {
             grid-area: image;
@@ -365,19 +365,88 @@
         }
 
         .reviewer__link {
-            grid-area: link;            
+            grid-area: link;
             color: var(--btn-primary-bg);
             font-weight: 600;
-            line-height: 24px; 
+            line-height: 24px;
         }
 
         .reviewer__profession {
             grid-area: profession;
             font-weight: 600;
             line-height: 24px;
-        }        
+        }
 
-        .footer {            
+        .team {
+            background-color: var(--page-bg);
+        }
+
+        .team .container__heading {
+            margin: 80px 0;
+        }
+
+        .team .heading__section {
+            text-transform: initial;
+        }
+
+        .team__content {
+            color: black;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 325px 325px 325px;
+            grid-template-rows: 370px;
+            margin-bottom: 80px;            
+        }
+
+        .team__content>div {
+            background-color: white;
+        }
+
+        .team .card {
+            padding: 0;
+            gap: 0;
+        }
+
+        .card__photo {
+            width: 325px;
+            height: 230px;
+        }
+
+        .card__info {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+            padding: 30px;
+        }
+
+        .info__social-media {
+            display: flex; 
+            align-items: center;         
+            gap: 15px;
+        }
+
+        .social-media__icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .info__header {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #252B42;
+            margin: 0;
+        }
+
+        .info__subheader {
+            color: #737373;
+            font-weight: 600;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        .footer {
             --footer-secondary_bg: #16697A;
             --footer-div-bg: #364067;
             --footer-nav-link-color: #BDBDBD;
@@ -536,7 +605,6 @@
             font-size: 12px;
             color: var(--footer-nav-link-color);
         }
-      
     </style>
 </head>
 
@@ -647,56 +715,137 @@
 
             <div class="feedback__content">
 
-                <div class="card">  
+                <div class="card">
                     <div class="card__stars">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon"> 
-                        <img src="icons\star.svg" class="star__img" alt="full star icon"> 
-                        <img src="icons\star.svg" class="star__img" alt="full star icon"> 
                         <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon"> 
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
                     </div>
-                   
-                    <p class="card__content">Slate helps you see how many more days you need to work to reach your financial goal.</p>
+
+                    <p class="card__content">Slate helps you see how many more days you need to work to reach your
+                        financial goal.</p>
                     <div class="content__reviewer">
-                    <img class="reviewer__img" src="icons/girl.svg" alt="girl icon">                    
-                    <a class="reviewer__link" href="#">Regina Miles</a>
-                        <p class="reviewer__profession">Designer</p>                                                      
+                        <img class="reviewer__img" src="icons/girl.svg" alt="girl icon">
+                        <a class="reviewer__link" href="#">Regina Miles</a>
+                        <p class="reviewer__profession">Designer</p>
+                    </div>
                 </div>
+
+                <div class="card">
+                    <div class="card__stars">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                    </div>
+
+                    <p class="card__content">Slate helps you see how many more days you need to work to reach your
+                        financial goal.</p>
+                    <div class="content__reviewer">
+                        <img class="reviewer__img" src="icons/woman.svg" alt="woman icon">
+                        <a class="reviewer__link" href="#">Regina Miles</a>
+                        <p class="reviewer__profession">Designer</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__stars">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                    </div>
+
+                    <p class="card__content">Slate helps you see how many more days you need to work to reach your
+                        financial goal.</p>
+                    <div class="content__reviewer">
+                        <img class="reviewer__img" src="icons/man.svg" alt="man icon">
+                        <a class="reviewer__link" href="#">Regina Miles</a>
+                        <p class="reviewer__profession">Designer</p>
+                    </div>
+                </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+
+            <div class="container__heading">
+                <h2 class="heading__section">Meet Our Team</h2>
+                <p class="paragraph__section">Problems trying to resolve the conflict between
+                    the two major realms of Classical physics: Newtonian mechanics</p>
             </div>
 
-            <div class="card">  
-                <div class="card__stars">
-                    <img src="icons\star.svg" class="star__img" alt="full star icon"> 
-                    <img src="icons\star.svg" class="star__img" alt="full star icon"> 
-                    <img src="icons\star.svg" class="star__img" alt="full star icon"> 
-                    <img src="icons\star.svg" class="star__img" alt="full star icon">
-                    <img src="icons\empty-star.svg" class="star__img" alt="empty star icon"> 
-                </div>
-               
-                <p class="card__content">Slate helps you see how many more days you need to work to reach your financial goal.</p>
-                <div class="content__reviewer">
-                <img class="reviewer__img" src="icons/woman.svg" alt="woman icon">                    
-                <a class="reviewer__link" href="#">Regina Miles</a>
-                    <p class="reviewer__profession">Designer</p>                                                      
-            </div>
-        </div>
+            <div class="team__content">
 
-        <div class="card">  
-            <div class="card__stars">
-                <img src="icons\star.svg" class="star__img" alt="full star icon"> 
-                <img src="icons\star.svg" class="star__img" alt="full star icon"> 
-                <img src="icons\star.svg" class="star__img" alt="full star icon"> 
-                <img src="icons\star.svg" class="star__img" alt="full star icon">
-                <img src="icons\empty-star.svg" class="star__img" alt="empty star icon"> 
+                <div class="card">
+                    <img class="card__photo" src="img/Ashley.png" alt="A woman named Ashley Fletcher">
+                    <div class="card__info">
+                        <h5 class="info__header">Ashley Fletcher</h5>
+                        <p class="info__subheader">CEO</p>
+                        <ul class="info__social-media">
+                            <li>
+                                <a href="#"><img src="icons/facebook light-blue.svg" class="social-media__icon" alt="Facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="icons/instagram light-blue.svg" class="social-media__icon" alt="Instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="icons/twitter light-blue.svg" class="social-media__icon" alt="Twitter"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card__photo" src="img/Ashley.png" alt="A woman named Rodney Stratton">
+                    <div class="card__info">
+                        <h5 class="info__header">Rodney Stratton</h5>
+                        <p class="info__subheader">Consultant</p>
+                        <ul class="info__social-media">
+                            <li>
+                                <a href="#"><img src="icons/facebook light-blue.svg" class="social-media__icon" alt="Facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="icons/instagram light-blue.svg" class="social-media__icon" alt="Instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="icons/twitter light-blue.svg" class="social-media__icon" alt="Twitter"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card__photo" src="img/Avie.png" alt="A man named Avie Beaton">
+                    <div class="card__info">
+                        <h5 class="info__header">Avie Beaton</h5>
+                        <p class="info__subheader">CO Founder</p>
+                        <ul class="info__social-media">
+                            <li>
+                                <a href="#"><img src="icons/facebook light-blue.svg" class="social-media__icon" alt="Facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="icons/instagram light-blue.svg" class="social-media__icon" alt="Instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="icons/twitter light-blue.svg" class="social-media__icon" alt="Twitter"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
             </div>
-           
-            <p class="card__content">Slate helps you see how many more days you need to work to reach your financial goal.</p>
-            <div class="content__reviewer">
-            <img class="reviewer__img" src="icons/man.svg" alt="man icon">                    
-            <a class="reviewer__link" href="#">Regina Miles</a>
-                <p class="reviewer__profession">Designer</p>                                                      
+
+
+
         </div>
-    </div>
     </section>
 
     <footer class="footer">
