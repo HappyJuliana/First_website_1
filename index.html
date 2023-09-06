@@ -285,21 +285,46 @@
                     #252B42 0%,
                     #252B42 50%,
                     rgb(1, 61, 73) 50%,
-                    rgb(1, 61, 73) 100%);
+                    rgb(1, 61, 73) 100%);                   
         }
         
         .best-business .container__heading {
             margin: 80px 0 50px;
+
+            @media screen and (max-width: 768px) {
+               margin: 100px 0 60px;
+            }
         }
 
         .best-business .heading__section {
-            text-transform: initial;
+            text-transform: initial;            
+        }  
+
+        .best-business .subheading__section {          
+            @media screen and (max-width: 768px) {
+               max-width: 225px;
+            }
+        }  
+        
+        .best-business__content__mobile {
+            display: none;
+
+            @media screen and (max-width: 768px) {
+                display: block; 
+                max-width: 305px;  
+                max-height: 445px;    
+                margin-bottom: 50px;       
+            }
         }        
 
         .best-business__content {
-            width: 875px;
-            height: 440px;
-            margin-bottom: 80px;
+            max-width: 875px;
+            max-height: 440px;
+            margin-bottom: 80px;            
+
+            @media screen and (max-width: 768px) {
+               display: none;
+            }
         }
 
         .feedback {
@@ -763,7 +788,12 @@
             <video class="best-business__content" controls poster="img/video-cover.png">
                 <source src="videos/business.mp4" type="video/mp4">
                 <source src="videos/business.mp4" type="video/ogg">
-              </video>          
+              </video>      
+              
+              <video class="best-business__content__mobile" controls poster="img/video-cover_mobile.png">
+                <source src="videos/vertical.mp4" type="video/mp4">
+                <source src="videos/vertical.mp4" type="video/ogg">
+              </video>      
         
     </section>           
 
