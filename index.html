@@ -8,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <style>
         body {
+            --btn-primary-bg: #FFA62B;
             font-family: 'Montserrat';
             margin: 0;
             color: white;
@@ -29,7 +30,6 @@
             text-decoration: none;
             letter-spacing: 0.2px;
             line-height: 24px;
-            font-weight: 600;
         }
 
         .top-banner {
@@ -40,6 +40,10 @@
             position: relative;
             z-index: 1;
             background-position-x: center;
+
+            @media screen and (max-width: 768px) {
+                padding: 30px 0 100px;
+            }
         }
 
         .top-banner::before {
@@ -60,17 +64,19 @@
             margin-bottom: 160px;
             width: 100%;
             position: sticky;
-        }
 
-        .header__go-home {
-            font-size: 25px;
-            font-weight: 700;
-            line-height: 32px;
-            letter-spacing: 0.1px;
-        }
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }        
 
         .header__nav {
             margin-left: auto;
+
+            @media screen and (max-width: 768px) {
+                margin-left: initial;
+            }
         }
 
         .header__nav .nav__list {
@@ -78,11 +84,19 @@
             gap: 20px;
         }
 
+        .nav__list a:hover {
+            text-decoration: underline;
+        }
+
         .header__actions {
             margin-left: 40px;
             display: flex;
             align-items: center;
             gap: 15px;
+
+            @media screen and (max-width: 768px) {
+                margin-left: 0;
+            }
         }
 
         .actions_item {
@@ -102,12 +116,16 @@
         }
 
         .container {
-            max-width: 1020px;
+            max-width: 1050px;
             margin: 0 auto;
             padding: 0 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @media screen and (max-width: 768px) {
+                padding: 0 40px;
+            }
         }
 
         .heading {
@@ -119,19 +137,35 @@
             line-height: 80px;
             font-weight: 800;
             letter-spacing: 0.2px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 40px;
+                line-height: 57px;
+            }
         }
 
         .sub-heading {
             font-size: 20px;
             font-weight: 500;
             line-height: 30px;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.2px;            
         }
 
         .top-banner__actions {
             display: flex;
             gap: 10px;
             justify-content: center;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+        }
+
+        .top-banner__actions button {
+            white-space: nowrap;
+            width: min-content;
         }
 
         .button {
@@ -148,8 +182,8 @@
         }
 
         .button--primary {
-            background-color: #FFA62B;
-            border: #FFA62B;
+            background-color: var(--btn-primary-bg);
+            border: var(--btn-primary-bg);
         }
 
         .why-us {
@@ -160,9 +194,14 @@
             margin-top: 145px;
             margin-bottom: 45px;
             display: flex;
+            gap: 10px;
             flex-direction: column;
             align-items: center;
             text-align: center;
+
+            @media screen and (max-width: 768px) {
+                margin-top: 75px;
+            }
         }
 
         .heading__why-us {
@@ -171,6 +210,7 @@
             line-height: 57px;
             letter-spacing: 0.2px;
             text-transform: uppercase;
+            margin: 0 auto;           
         }
 
         .paragraph__why-us {
@@ -178,6 +218,11 @@
             line-height: 20px;
             letter-spacing: 0.2px;
             max-width: 470px;
+            margin: 0 auto;
+
+            @media screen and (max-width: 768px) {
+                max-width: 305px;
+            }
         }
 
         .why-us__content {
@@ -187,6 +232,12 @@
             grid-template-columns: 330px 330px 330px;
             grid-template-rows: 195px 195px;
             margin-bottom: 100px;
+
+            @media screen and (max-width: 768px) {
+                grid-template-columns: 330px;
+                grid-template-rows: 195px;
+                margin-bottom: 70px;
+            }
         }
 
         .why-us__content>div {
@@ -198,6 +249,10 @@
             flex-direction: column;
             padding: 35px 40px;
             gap: 15px;
+
+            @media screen and (max-width: 768px) {
+                margin: 0 20px;
+            }
         }
 
         .card__img {
@@ -213,7 +268,7 @@
             font-size: 16px;
             font-weight: 700;
             line-height: 24px;
-            letter-spacing: 0.1px;
+            letter-spacing: 0.1px;            
         }
 
         .card__content {
@@ -222,44 +277,167 @@
             letter-spacing: 0.2px;
         }
 
-        @media screen and (min-width: 320px) and (max-width: 570px) {
-            body {
-                background-position: center;
-            }
+        .footer {
+            --footer-bg: #252B42;
+            --footer-secondary_bg: #16697A;
+            --footer-div-bg: #364067;
+            --footer-nav-link-color: #BDBDBD;
+            background-color: var(--footer-bg);
+        }
 
-            .top-banner__header {
-                flex-direction: column;
-            }
+        .footer__secondary {
+            background-color: var(--footer-secondary_bg);
 
-            .header__go-home {
-                font-size: 1.5em;
-            }
-
-            .header__nav {
-                margin: 0 auto;
-                font-size: 0.8em;
-                margin: 10px;
-            }
-
-            .header__actions {
-                margin: 0 auto;
-            }
-
-            .main-heading {
-                font-size: 2em;
-                line-height: 40px;
-            }
-
-            .sub-heading {
-                font-size: 1em;
-                line-height: 20px;
-            }
-
-            .button {
-                line-height: 15px;
-                font-size: 0.8em;
+            @media screen and (max-width: 768px) {
+                text-align: center;
             }
         }
+
+        .footer__content {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat (2, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 'logo socials'
+                'divider divider'
+                'main main';
+
+            @media screen and (max-width: 768px) {
+                grid-template-areas: 'logo'
+                    'socials'
+                    'main';
+                gap: 50px;
+                padding: 50px 0 70px;
+            }
+        }
+
+        .footer__logo {
+            grid-area: logo;
+            margin: 55px 0;
+
+            @media screen and (max-width: 768px) {
+                margin: 0;
+            }
+        }
+
+        .logo__img {
+            height: 24px;
+        }
+
+        .footer__socials {
+            grid-area: socials;
+            margin: 55px 0;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-self: end;
+
+            @media screen and (max-width: 768px) {
+                margin: 0;
+                justify-self: initial;
+            }
+        }
+
+        .socials__link {
+            display: flex;
+        }
+
+        .footer__divider {
+            grid-area: divider;
+            width: 100%;
+            border: none;
+            height: 1px;
+            background-color: var(--footer-div-bg);
+            margin: 0;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .footer__main {
+            grid-area: main;
+            display: flex;
+            gap: 30px;
+            margin: 70px 0;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                margin: 0;
+            }
+        }
+
+        .footer__nav {
+            display: flex;
+            gap: 30px;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+
+        .footer__nav .nav__block {
+            min-width: 150px;
+        }
+
+        .footer-main__title {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .footer__nav .nav__list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer__nav .nav__list a {
+            color: var(--footer-nav-link-color);
+        }
+
+        .footer__subscription {
+            flex-grow: 1;
+        }
+
+        .subscription__form {
+            display: flex;
+            border: 1px solid #E6E6E6;
+            border-radius: 5px;
+            width: 100%;
+            font-family: 'Montserrat';
+        }
+
+        .subscription__form .form__input {
+            height: 58px;
+            background-color: white;
+            border: none;
+            flex-grow: 1;
+            padding: 0 20px;
+        }
+
+        input::placeholder {
+            color: var(--footer-nav-link-color);
+            font-size: 14px;
+        }
+
+        .subscription__form .form__submit {
+            border: none;
+            background-color: var(--btn-primary-bg);
+            color: white;
+            font-family: 'Montserrat';
+            letter-spacing: 1px;
+            padding: 0 22px;
+            cursor: pointer;
+        }
+
+        .subscription__message {
+            font-size: 12px;
+            color: var(--footer-nav-link-color);
+        }
+      
     </style>
 </head>
 
@@ -267,7 +445,9 @@
     <section class="top-banner">
         <div class="container">
             <header class="top-banner__header">
-                <a href="#" class="header__go-home">KMarketer</a>
+                <a href="#" class="header__go-home">
+                    <img src="img\KMarketer-logo.svg" alt="KMarketer logo">
+                </a>
 
                 <nav class="header__nav">
                     <ul class="nav__list">
@@ -338,8 +518,8 @@
                 </div>
 
                 <div class="card">
-                    <h5 class="card__header"><img class="card__img" src="img\chart-firms.svg"
-                            alt="chart icon">National top 50 firms</h5>
+                    <h5 class="card__header"><img class="card__img" src="img\chart-firms.svg" alt="chart icon">National
+                        top 50 firms</h5>
                     <p class="card__content">the quick fox jumps over the lazy dog the quick fox jumps over the lazy
                         dog</p>
                 </div>
@@ -356,6 +536,88 @@
         </div>
 
     </section>
+
+    <footer class="footer">
+        <section class="footer__primary">
+            <div class="container">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <img src="img\KMarketer-logo.svg" alt="KMarketer logo" class="logo__img">
+                    </a>
+                    <ul class="footer__socials">
+                        <li><a href="#" class="socials__link"><img src="icons\facebook.svg" alt="Facebook logo"
+                                    class="socials__logo"></a></li>
+                        <li><a href="#" class="socials__link"><img src="icons\instagram.svg" alt="Instagram logo"
+                                    class="socials__logo"></a></li>
+                        <li><a href="#" class="socials__link"><img src="icons\twitter.svg" alt="Twitter logo"
+                                    class="socials__logo"></a></li>
+                        <li><a href="#" class="socials__link"><img src="icons\youtube.svg" alt="Youtube logo"
+                                    class="socials__logo"></a></li>
+                    </ul>
+
+                    <hr class="footer__divider">
+
+                    <div class="footer__main">
+                        <nav class="footer__nav">
+                            <div class="nav__block">
+                                <h4 class="footer-main__title">Company Info</h4>
+                                <ul class="nav__list">
+                                    <li class="nav__list-item"><a href="#">About Us</a></li>
+                                    <li class="nav__list-item"><a href="#">Carrier</a></li>
+                                    <li class="nav__list-item"><a href="#">We are hiring</a></li>
+                                    <li class="nav__list-item"><a href="#">Blog</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="nav__block">
+                                <h4 class="footer-main__title">Legal</h4>
+                                <ul class="nav__list">
+                                    <li class="nav__list-item"><a href="#">About Us</a></li>
+                                    <li class="nav__list-item"><a href="#">Carrier</a></li>
+                                    <li class="nav__list-item"><a href="#">We are hiring</a></li>
+                                    <li class="nav__list-item"><a href="#">Blog</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="nav__block">
+                                <h4 class="footer-main__title">Features</h4>
+                                <ul class="nav__list">
+                                    <li class="nav__list-item"><a href="#">Business Marketing</a></li>
+                                    <li class="nav__list-item"><a href="#">User Analytic</a></li>
+                                    <li class="nav__list-item"><a href="#">Live Chat</a></li>
+                                    <li class="nav__list-item"><a href="#">Unlimited Support</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="nav__block">
+                                <h4 class="footer-main__title">Resources</h4>
+                                <ul class="nav__list">
+                                    <li class="nav__list-item"><a href="#">IOS & Android</a></li>
+                                    <li class="nav__list-item"><a href="#">Watch a Demo</a></li>
+                                    <li class="nav__list-item"><a href="#">Customers</a></li>
+                                    <li class="nav__list-item"><a href="#">API</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+
+                        <div class="footer__subscription">
+                            <h4 class="footer-main__title">Get In Touch</h4>
+                            <form class="subscription__form" action="submit">
+                                <input class="form__input" type="email" placeholder="Your Email">
+                                <input class="form__submit" type="submit" value="Subscribe">
+                            </form>
+                            <p class="subscription__message">Lorem impsum dolor amit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer__secondary">
+            <div class="container">
+                <p>Made With Love By Figmaland All Right Reserved</p>
+            </div>
+        </section>
+    </footer>
 
 </body>
 
