@@ -43,20 +43,20 @@ employeesNames.sort();
 console.log(employeesNames);
 
 //Fifth Exercise
-const keys = (obj) => { 
+const keys = (obj) => {
     const keys = Object.keys(obj).length;
     return keys;
 }
-const person = {firstName: 'John', lastName: 'Doe', age: 30, profession: 'developer'};
+const person = { firstName: 'John', lastName: 'Doe', age: 30, profession: 'developer' };
 console.log(keys(person));
 
 //Sixth Exercise
 const generateNumbers = (number) => {
-const numbers_2 = new Array;
-for (let i = 0; i <= number; i++) {
-    numbers_2.push(i)
-}
-return numbers_2;
+    const numbers_2 = new Array;
+    for (let i = 0; i <= number; i++) {
+        numbers_2.push(i)
+    }
+    return numbers_2;
 }
 let n = 5;
 console.log(generateNumbers(n));
@@ -73,14 +73,14 @@ console.log("The biggest number in this array is: " + theBiggestNumber);
 const averageScore = (grades) => {
     let sum = 0;
     let count = 0;
-for (const value in grades) {
-    sum += grades[value];
-    count++;
+    for (const value in grades) {
+        sum += grades[value];
+        count++;
+    }
+    const average = sum / count;
+    return average;
 }
-const average = sum / count;
-return average;
-}
-const gradesStudent = {math: 8, literature: 7, history: 9};
+const gradesStudent = { math: 8, literature: 7, history: 9 };
 console.log(averageScore(gradesStudent));
 
 //Nineth Exercise
@@ -92,9 +92,9 @@ dog.color = 'brown';
 const bornPuppies = (numberOfPuppies) => {
     const puppyNames = [];
     for (let i = 1; i <= numberOfPuppies; i++) {
-      puppyNames.push(`Puppy_${i}`);
+        puppyNames.push(`Puppy_${i}`);
     }
-      dog.puppies = puppyNames;
-  }
-    bornPuppies(5);
-    console.log(dog);
+    dog.puppies = puppyNames;
+}
+bornPuppies(5);
+console.log(dog);
