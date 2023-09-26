@@ -52,11 +52,11 @@ console.log(keys(person));
 
 //Sixth Exercise
 const generateNumbers = (number) => {
-    const numbers_2 = new Array;
+    const numbersCopy = new Array;
     for (let i = 0; i <= number; i++) {
-        numbers_2.push(i)
+        numbersCopy.push(i)
     }
-    return numbers_2;
+    return numbersCopy;
 }
 let n = 5;
 console.log(generateNumbers(n));
