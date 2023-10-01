@@ -7,11 +7,11 @@ let student = {
 };
 
 const getData = (studentObject) => {
-let {name, lastName, faculty, year} = studentObject;
-const studentArray = [];
-studentArray.push(`${name} ${lastName}`, faculty, year);
+    let { name, lastName, faculty, year } = studentObject;
+    const studentArray = [];
+    studentArray.push(`${name} ${lastName}`, faculty, year);
 
-return studentArray;
+    return studentArray;
 }
 
 console.log(getData(student));
@@ -21,9 +21,9 @@ console.log(getData(student));
 const colors = ['red', 'green', 'blue', 'violet'];
 
 const getColor = (colorsArray) => {
-const [first, , third] = colorsArray;
-console.log(first);
-console.log(third);
+    const [first, , third] = colorsArray;
+    console.log(first);
+    console.log(third);
 }
 
 getColor(colors);
@@ -45,8 +45,8 @@ console.log(combineNumbers(numbersFirst, numbersSecond));
 
 
 //Fifth Exercise
-let language = {language: 'en'};
-const studentAdvanced = (student, language) => finalStudent = {...student, ...language};
+let language = { language: 'en' };
+const studentAdvanced = (student, language) => finalStudent = { ...student, ...language };
 
 console.log(studentAdvanced(student, language));
 
@@ -57,12 +57,12 @@ const oddNumbers = [160, 3, 1719, 19, 11, 13, -21];
 
 const findOutlier = (numbers) => {
     let even = numbers.filter((number) => number % 2 === 0);
-    let odd = numbers.filter((number)  => number % 2 !== 0);
+    let odd = numbers.filter((number) => number % 2 !== 0);
 
     return even.length === 1 ? even[0] : odd[0];
-  }
-  
-    console.log(findOutlier(evenNumbers));
-    console.log(findOutlier(oddNumbers));
+}
+
+console.log(findOutlier(evenNumbers));
+console.log(findOutlier(oddNumbers));
 
 
