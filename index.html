@@ -542,7 +542,7 @@
             flex-direction: column;
             padding: 90px 0px;
             gap: 40px;
-            max-width: 600px;
+            max-width: 640px;
             width: 100%;
             align-self: start;
         }
@@ -592,21 +592,26 @@
             max-width: 600px;
             max-height: 140px;
             resize: none;
-            padding: 15px 505px 100px 25px;
+            padding: 15px 460px 100px 25px;
         }
 
         .form input,
         select {
-            width: 290px;
+            width: 300px;
             max-height: 50px;
         }
 
         .form input {
-            padding: 9px 100px 15px 20px;
+            padding: 9px 0px 15px 5px;                     
         }
 
         .form select {
-            padding: 13px 20px 15px 20px;
+            padding: 13px 20px 15px 20px;     
+        }
+
+        .form .name, .email {
+            display: flex;
+            flex-direction: column;
         }
 
         .form .button {
@@ -1089,8 +1094,16 @@
 
                     <form class="form__appointment" action="/action_page.php">
                         <div class="name__email">
+                            <div class="name">
                             <input type="text" id="fname" name="fname" placeholder="Full Name" required>
+                            <p>Lorem impsum dolor amit</p> <!-- Добавляем параграф здесь -->
+                        </div>
+
+                        <div class="email">
                             <input type="email" id="eml" name="eml" placeholder="example@gmail.com" required>
+                            <p>Lorem impsum dolor amit</p> <!-- Добавляем параграф здесь -->
+
+                        </div>
                         </div>
 
                         <div class="date__time">
@@ -1112,7 +1125,10 @@
                                 <option value="5PM">5:00</option>
                             </select>
                         </div>
+                        <div>
                         <textarea name="street" placeholder="Message"></textarea>
+                        <p>Lorem impsum dolor amit</p> <!-- Добавляем параграф здесь -->
+                    </div>
                     </form>
                     <button class="button button--primary">Book Appointment</button>
                 </div>
