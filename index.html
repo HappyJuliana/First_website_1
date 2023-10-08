@@ -169,6 +169,7 @@
             width: min-content;
         }
 
+        .input__button,
         .button {
             padding: 10px 35px;
             line-height: 26px;
@@ -182,6 +183,7 @@
             font-family: 'Montserrat';
         }
 
+        .input__button,
         .button--primary {
             background-color: var(--btn-primary-bg);
             border: var(--btn-primary-bg);
@@ -576,7 +578,8 @@
             justify-content: space-between;
         }
 
-        .form input,
+        .form input[type="text"],
+        .form input[type="email"],
         select,
         textarea {
             border-radius: 5px;
@@ -595,26 +598,30 @@
             padding: 15px 460px 100px 25px;
         }
 
-        .form input,
+        .form input[type="text"],
+        .form input[type="email"],
         select {
             width: 300px;
             max-height: 50px;
         }
 
-        .form input {
-            padding: 9px 0px 15px 5px;                     
+        .form input[type="text"],
+        .form input[type="email"] {
+            padding: 9px 0px 15px 5px;
         }
 
         .form select {
-            padding: 13px 20px 15px 20px;     
+            padding: 13px 20px 15px 20px;
         }
 
-        .form .name, .email {
+        .form .name,
+        .email {
             display: flex;
             flex-direction: column;
         }
 
-        .form .button {
+        .form .button,
+        .input__button {
             border-radius: 5px;
             padding: 15px 40px;
             line-height: 28px;
@@ -817,7 +824,7 @@
             color: var(--footer-nav-link-color);
         }
     </style>
-    <script src="/First_website_1/JavaScript/script_8.js"></script>
+    <script src="/First_website_1/index.js"></script>
 </head>
 
 <body>
@@ -1092,18 +1099,18 @@
                         <h2 class="form__header__heading">Make an Appointment</h2>
                     </div>
 
-                    <form class="form__appointment" action="/action_page.php">
+                    <form class="form__appointment" id="appointment_form">
                         <div class="name__email">
                             <div class="name">
-                            <input type="text" id="fname" name="fname" placeholder="Full Name" required>
-                            <p>Lorem impsum dolor amit</p> <!-- Добавляем параграф здесь -->
-                        </div>
+                                <input type="text" id="inputName" name="fname" placeholder="Full Name">
+                                <p id="resultName">Lorem impsum dolor amit</p>
+                            </div>
 
-                        <div class="email">
-                            <input type="email" id="eml" name="eml" placeholder="example@gmail.com" required>
-                            <p>Lorem impsum dolor amit</p> <!-- Добавляем параграф здесь -->
+                            <div class="email">
+                                <input type="email" id="inputEmail" name="eml" placeholder="example@gmail.com">
+                                <p id="resultEmail" class="message__email">Lorem impsum dolor amit</p>
 
-                        </div>
+                            </div>
                         </div>
 
                         <div class="date__time">
@@ -1126,11 +1133,11 @@
                             </select>
                         </div>
                         <div>
-                        <textarea name="street" placeholder="Message"></textarea>
-                        <p>Lorem impsum dolor amit</p> <!-- Добавляем параграф здесь -->
-                    </div>
+                            <textarea id="inputMessage" name="message" placeholder="Message"></textarea>
+                            <p id="resultMessage">Lorem impsum dolor amit</p>
+                        </div>
+                        <input class="input__button" id="submit_form" type="submit" value="Book Appointment">
                     </form>
-                    <button class="button button--primary">Book Appointment</button>
                 </div>
             </div>
         </section>
