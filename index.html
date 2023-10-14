@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>KMarketer</title>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>   
-    <style>         
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
         body {
             --page-bg: #252B42;
             --btn-primary-bg: #FFA62B;
@@ -169,6 +169,7 @@
             width: min-content;
         }
 
+        .input__button,
         .button {
             padding: 10px 35px;
             line-height: 26px;
@@ -182,6 +183,7 @@
             font-family: 'Montserrat';
         }
 
+        .input__button,
         .button--primary {
             background-color: var(--btn-primary-bg);
             border: var(--btn-primary-bg);
@@ -280,50 +282,49 @@
         }
 
         .best-business {
-            background: linear-gradient(
-                    to bottom,
+            background: linear-gradient(to bottom,
                     #252B42 0%,
                     #252B42 50%,
                     rgb(1, 61, 73) 50%,
-                    rgb(1, 61, 73) 100%);                   
+                    rgb(1, 61, 73) 100%);
         }
-        
+
         .best-business .container__heading {
             margin: 80px 0 50px;
 
             @media screen and (max-width: 768px) {
-               margin: 100px 0 60px;
+                margin: 100px 0 60px;
             }
         }
 
         .best-business .heading__section {
-            text-transform: initial;            
-        }  
+            text-transform: initial;
+        }
 
-        .best-business .subheading__section {          
+        .best-business .subheading__section {
             @media screen and (max-width: 768px) {
-               max-width: 225px;
+                max-width: 225px;
             }
-        }  
-        
+        }
+
         .best-business__content__mobile {
             display: none;
 
             @media screen and (max-width: 768px) {
-                display: block; 
-                max-width: 305px;  
-                height: 445px;    
-                margin-bottom: 50px;       
+                display: block;
+                max-width: 305px;
+                height: 445px;
+                margin-bottom: 50px;
             }
-        }        
+        }
 
         .best-business__content {
             max-width: 875px;
             height: 440px;
-            margin-bottom: 80px;            
+            margin-bottom: 80px;
 
             @media screen and (max-width: 768px) {
-               display: none;
+                display: none;
             }
         }
 
@@ -518,6 +519,151 @@
             margin: 0;
         }
 
+        .form__primary {
+            background-image: url("img/layer_form.png");
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+            background-position-x: center;
+        }
+
+        .form__primary::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .form__container {
+            display: flex;
+            flex-direction: column;
+            padding: 90px 0px;
+            gap: 40px;
+            max-width: 640px;
+            width: 100%;
+            align-self: start;
+        }
+
+        .form__header__subheading {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            margin: 0;
+        }
+
+        .form__header__heading {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+            margin: 0;
+        }
+
+        .form__appointment {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .date__time,
+        .name__email {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .form input[type="text"],
+        .form input[type="email"],
+        select,
+        textarea {
+            border-radius: 5px;
+            border: 1px solid #BDBDBD;
+            font-family: Montserrat;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+            color: #BDBDBD;
+            margin: 0;
+        }
+
+        .form textarea {
+            max-width: 600px;
+            max-height: 140px;
+            resize: none;
+            padding: 15px 460px 100px 25px;
+        }
+
+        .form input[type="text"],
+        .form input[type="email"],
+        select {
+            width: 300px;
+            max-height: 50px;
+        }
+
+        .form input[type="text"],
+        .form input[type="email"] {
+            padding: 9px 0px 15px 5px;
+        }
+
+        .form select {
+            padding: 13px 20px 15px 20px;
+        }
+
+        .form .name,
+        .email {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form .button,
+        .input__button {
+            border-radius: 5px;
+            padding: 15px 40px;
+            line-height: 28px;
+            font-size: 14px;
+            white-space: nowrap;
+            width: min-content;
+        }
+
+        .form__secondary .container {
+            color: var(--page-bg);
+            width: 100%;
+            display: grid;
+            grid-template-areas: 'form_text actions';
+            justify-content: space-between;
+            padding: 40px 0;
+        }
+
+        .form__secondary__text {
+            grid-area: form_text;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form__secondary__actions {
+            grid-area: actions;
+        }
+
+        .form__secondary__heading {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: 0.1px;
+            margin: 0;
+        }
+
+        .form__secondary__subheading {
+            margin: 0;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+        }
+
         .footer {
             --footer-secondary_bg: #16697A;
             --footer-div-bg: #364067;
@@ -678,7 +824,7 @@
             color: var(--footer-nav-link-color);
         }
     </style>
-    <script src="/First_website_1/JavaScript/script_8.js"></script>    
+    <script src="/First_website_1/index.js"></script>
 </head>
 
 <body>
@@ -785,18 +931,18 @@
                 <p class="paragraph__section">Problems trying to resolve the conflict between
                     the two major realms of Classical physics: Newtonian mechanics</p>
             </div>
-            
+
             <video class="best-business__content" controls poster="img/video-cover.png">
                 <source src="videos/business.mp4" type="video/mp4">
                 <source src="videos/business.mp4" type="video/ogg">
-              </video>      
-              
-              <video class="best-business__content__mobile" controls poster="img/video-cover_mobile.png">
+            </video>
+
+            <video class="best-business__content__mobile" controls poster="img/video-cover_mobile.png">
                 <source src="videos/vertical.mp4" type="video/mp4">
                 <source src="videos/vertical.mp4" type="video/ogg">
-              </video>      
-        
-    </section>           
+            </video>
+
+    </section>
 
     <section class="feedback">
         <div class="container">
@@ -942,6 +1088,70 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="form">
+        <section class="form__primary">
+            <div class="container">
+                <div class="form__container">
+                    <div class="form__container__header">
+                        <p class="form__header__subheading">Contact Us</p>
+                        <h2 class="form__header__heading">Make an Appointment</h2>
+                    </div>
+
+                    <form class="form__appointment" id="appointment_form">
+                        <div class="name__email">
+                            <div class="name">
+                                <input type="text" id="inputName" name="fname" placeholder="Full Name">
+                                <p id="resultName">Lorem impsum dolor amit</p>
+                            </div>
+
+                            <div class="email">
+                                <input type="email" id="inputEmail" name="eml" placeholder="example@gmail.com">
+                                <p id="resultEmail" class="message__email">Lorem impsum dolor amit</p>
+
+                            </div>
+                        </div>
+
+                        <div class="date__time">
+                            <select id="date" name="date" size="1">
+                                <option value="" disabled selected>Please Select</option> <!-- Placeholder -->
+                                <option value="Mon">Monday</option>
+                                <option value="Tue">Tuesday</option>
+                                <option value="Wed">Wednesday</option>
+                                <option value="Thur">Thursday</option>
+                                <option value="Fri">Friday</option>
+                            </select>
+
+                            <select id="time" name="time" size="1">
+                                <option value="" disabled selected>4:00 Available</option> <!-- Placeholder -->
+                                <option value="4PM">4:00</option>
+                                <option value="3PM">3:00</option>
+                                <option value="2PM">2:00</option>
+                                <option value="1PM">1:00</option>
+                                <option value="5PM">5:00</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea id="inputMessage" name="message" placeholder="Message"></textarea>
+                            <p id="resultMessage">Lorem impsum dolor amit</p>
+                        </div>
+                        <input class="input__button" id="submit_form" type="submit" value="Book Appointment">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="form__secondary">
+            <div class="container">
+                <div class="form__secondary__text">
+                    <h3 class="form__secondary__heading">Consulting Agency For Your Business</h3>
+                    <p class="form__secondary__subheading">the quick fox jumps over the lazy dog</p>
+                </div>
+                <button class="button button--primary">Contact Us</button>
+            </div>
+        </section>
+
     </section>
 
     <footer class="footer">
