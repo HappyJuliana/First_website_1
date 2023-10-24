@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const inputName = document.getElementById('inputName');
     const inputEmail = document.getElementById('inputEmail');
     const inputMessage = document.getElementById('inputMessage');
-    
+
     form.addEventListener('submit', handleSubmit);
 
     function handleSubmit(event) {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let formElements = [
             {
-                element: inputName, 
+                element: inputName,
                 properties: {
                     value: inputName.value,
                     successLabel: `Hello, ${inputName.value}!`,
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
             },
         ];
-        
+
         const resetClass = (element) => {
             let classes = [...element.classList];
 
@@ -72,34 +72,5 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         formElements.forEach((item) => validateElement(item));
-
-/*        const fname = {
-            value: inputName.value,
-            successLabel: `Hello, ${inputName.value}!`,
-            errorLabel: 'Your name should consist of 2 or more characters',
-            condition: inputName.value.trim().length > 2,
-        }
-
-        validateElement(inputName, fname)
-
-        const eml = {
-            value: inputEmail.value,
-            successLabel: `Your email ${inputEmail.value} was registered`,
-            errorLabel: 'Please enter your email',
-            condition: !!inputEmail.value,
-        }
-
-        validateElement(inputEmail, eml);
-
-        const message = {
-            value: inputMessage.value,
-            successLabel: 'We received your message',
-            errorLabel: 'Your message should contain at least 3 words',
-            condition: inputMessage.value.trim().split(' ').length > 2,
-        }
-
-        validateElement(inputMessage, message);*/
-
-       
     }
 });
