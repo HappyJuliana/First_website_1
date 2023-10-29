@@ -546,6 +546,12 @@
             gap: 40px;
             max-width: 600px;           
             align-self: start;
+
+            @media screen and (max-width: 768px) {
+                max-width: 300px;  
+                padding: 115px 0px 85px;
+                align-self: center;
+            }
         }
 
         .form__header__subheading {
@@ -572,6 +578,15 @@
                 'date time'
                 'message message';
             grid-gap: 20px;
+
+            @media screen and (max-width: 768px) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-areas: 'name'
+                    'email'
+                    'date'
+                    'time'
+                    'message';               
+            }
         }
 
         .form__grid-content {
@@ -610,8 +625,12 @@
         .form textarea {
             max-height: 140px;
             resize: none;
-            padding: 15px 460px 100px 20px;
+            padding: 10px 460px 80px 20px;
             margin-bottom: 40px;
+
+            @media screen and (max-width: 768px) {
+                padding: 15px 195px 100px 20px;
+            }
         }
 
         .form input[type="text"],
@@ -643,6 +662,10 @@
             font-size: 14px;
             white-space: nowrap;
             width: min-content;
+
+            @media screen and (max-width: 768px) {
+                width: 285px;
+            }
         }      
 
         .form__secondary .container {
@@ -652,6 +675,13 @@
             grid-template-areas: 'form_text actions';
             justify-content: space-between;
             padding: 40px 0;
+
+            @media screen and (max-width: 768px) {
+                gap: 50px;
+                padding: 40px;
+                max-width: 350px;  
+                display: flex;              
+            }
         }
 
         .form__secondary__text {
@@ -659,6 +689,10 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+
+            @media screen and (max-width: 768px) {
+                max-width: 240px;     
+            }
         }
 
         .form__secondary__actions {
