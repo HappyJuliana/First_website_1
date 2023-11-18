@@ -50,7 +50,6 @@
                     letter-spacing: 0.2px;
                     margin: 0;
                 }
-
             }
 
             .form__appointment {
@@ -89,10 +88,7 @@
                     }
                 }
 
-                input[type="text"],
-                input[type="email"],
-                select,
-                textarea {
+                @mixin input-aspect {
                     border-radius: 5px;
                     border: 1px solid #BDBDBD;
                     font-family: Montserrat;
@@ -100,6 +96,22 @@
                     letter-spacing: 0.2px;
                     color: #BDBDBD;
                     margin: 0;
+                }
+
+                input[type="text"] {
+                    @include input-aspect;
+                }
+
+                input[type="email"] {
+                    @include input-aspect;
+                }
+
+                select {
+                    @include input-aspect;
+                }
+
+                textarea {
+                    @include input-aspect;
                 }
 
                 textarea {
@@ -112,25 +124,36 @@
                     }
                 }
 
-                input[type="text"],
-                input[type="email"],
-                select {
+                %input-height {
                     max-height: 50px;
                 }
 
-                input[type="text"],
+                input[type="text"] {
+                    @extend %input-height;
+                    padding: 9px 0px 15px 20px;
+                }
+
                 input[type="email"] {
+                    @extend %input-height;
                     padding: 9px 0px 15px 20px;
                 }
 
                 select {
+                    @extend %input-height;
                     padding: 15px 20px 15px 15px;
                 }
 
-                .name,
-                .email {
+                @mixin flex-column {
                     display: flex;
                     flex-direction: column;
+                }
+
+                .name {
+                    @include flex-column;
+                }
+
+                .email {
+                    @include flex-column;
                 }
 
                 #submit_form {
@@ -147,16 +170,19 @@
                     }
                 }
 
-                .form__grid-content.success .formResult {
-                    color: #FFA62B;
+                %form-result {
                     font-weight: bold;
                     margin-top: 10px;
                 }
 
+                .form__grid-content.success .formResult {
+                    @extend %form-result;
+                    color: #FFA62B;                    
+                }
+
                 .form__grid-content.error .formResult {
-                    color: #252B42;
-                    font-weight: bold;
-                    margin-top: 10px;
+                    @extend %form-result;
+                    color: #252B42;                    
                 }
             }
         }
@@ -205,8 +231,7 @@
         }
     }
 
-    .button,
-    .input__button {
+    .button {
         border-radius: 5px;
         padding: 15px 40px;
         line-height: 28px;

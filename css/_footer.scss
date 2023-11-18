@@ -153,6 +153,10 @@
     &__secondary {
         background-color: $footer-secondary_bg;
 
+        .container {
+            align-items: initial;
+        }
+
         @media screen and (max-width: 768px) {
             text-align: center;
         }
