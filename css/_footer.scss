@@ -1,0 +1,160 @@
+@import 'variables';
+
+.footer {
+    background-color: $page-bg;
+
+    &__primary {
+        .footer__content {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 'logo socials'
+                'divider divider'
+                'main main';
+
+            @media screen and (max-width: 768px) {
+                grid-template-areas: 'logo'
+                    'socials'
+                    'main';
+                gap: 50px;
+                padding: 50px 0 70px;
+            }
+
+            .footer__logo {
+                grid-area: logo;
+                margin: 55px 0;
+
+                @media screen and (max-width: 768px) {
+                    margin: 0;
+                }
+
+                .logo__img {
+                    height: 24px;
+                }
+            }
+
+            .footer__socials {
+                grid-area: socials;
+                margin: 55px 0;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                justify-self: end;
+
+                @media screen and (max-width: 768px) {
+                    margin: 0;
+                    justify-self: initial;
+                }
+
+                .socials__link {
+                    display: flex;
+                }
+            }
+
+            .footer__divider {
+                grid-area: divider;
+                width: 100%;
+                border: none;
+                height: 1px;
+                background-color: $footer-div-bg;
+                margin: 0;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .footer__main {
+                grid-area: main;
+                display: flex;
+                gap: 30px;
+                margin: 70px 0;
+
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                    margin: 0;
+                }
+
+                .footer-main__title {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    margin-bottom: 20px;
+                    margin-top: 0;
+                }
+
+                .footer__nav {
+                    display: flex;
+                    gap: 30px;
+
+                    @media screen and (max-width: 768px) {
+                        flex-direction: column;
+                    }
+
+                    .nav__block {
+                        min-width: 150px;
+                    }
+
+                    .nav__list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        a {
+                            color: $footer-nav-link-color;
+                        }
+                    }
+                }
+
+                .footer__subscription {
+                    flex-grow: 1;
+
+                    .subscription__form {
+                        display: flex;
+                        border: 1px solid #E6E6E6;
+                        border-radius: 5px;
+                        width: 100%;
+                        font-family: 'Montserrat';
+
+                        .form__input {
+                            height: 58px;
+                            background-color: white;
+                            border: none;
+                            flex-grow: 1;
+                            padding: 0 20px;
+
+                            input::placeholder {
+                                color: $footer-nav-link-color;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .form__submit {
+                            border: none;
+                            background-color: $btn-primary-bg;
+                            color: white;
+                            font-family: 'Montserrat';
+                            letter-spacing: 1px;
+                            padding: 0 22px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .subscription__message {
+                        font-size: 12px;
+                        color: $footer-nav-link-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &__secondary {
+        background-color: $footer-secondary_bg;
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
+    }
+}

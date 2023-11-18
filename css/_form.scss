@@ -1,0 +1,221 @@
+@import 'variables';
+
+.form {
+    &__primary {
+        background-image: url("/img/layer_form.png");
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        background-position-x: center;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .form__container {
+            display: flex;
+            flex-direction: column;
+            padding: 90px 0px;
+            gap: 40px;
+            max-width: 600px;
+            align-self: start;
+
+            @media screen and (max-width: 768px) {
+                max-width: 300px;
+                padding: 115px 0px 85px;
+                align-self: center;
+            }
+
+            &__header {
+                .form__header__subheading {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: 0.1px;
+                    margin: 0;
+                }
+
+                .form__header__heading {
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 57px;
+                    letter-spacing: 0.2px;
+                    margin: 0;
+                }
+
+            }
+
+            .form__appointment {
+
+                #inputName {
+                    grid-area: name;
+                }
+
+                #inputEmail {
+                    grid-area: email;
+                }
+
+                #date {
+                    grid-area: date;
+                }
+
+                #time {
+                    grid-area: time;
+                }
+
+                .form__grid-container {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: auto;
+                    grid-template-areas: 'name email'
+                        'date time';
+                    grid-gap: 20px;
+                    margin-bottom: 20px;
+
+                    @media screen and (max-width: 768px) {
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-template-areas: 'name'
+                            'email'
+                            'date'
+                            'time';
+                    }
+                }
+
+                input[type="text"],
+                input[type="email"],
+                select,
+                textarea {
+                    border-radius: 5px;
+                    border: 1px solid #BDBDBD;
+                    font-family: Montserrat;
+                    line-height: 24px;
+                    letter-spacing: 0.2px;
+                    color: #BDBDBD;
+                    margin: 0;
+                }
+
+                textarea {
+                    max-height: 140px;
+                    resize: none;
+                    padding: 10px 460px 80px 20px;
+
+                    @media screen and (max-width: 768px) {
+                        padding: 15px 195px 100px 20px;
+                    }
+                }
+
+                input[type="text"],
+                input[type="email"],
+                select {
+                    max-height: 50px;
+                }
+
+                input[type="text"],
+                input[type="email"] {
+                    padding: 9px 0px 15px 20px;
+                }
+
+                select {
+                    padding: 15px 20px 15px 15px;
+                }
+
+                .name,
+                .email {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                #submit_form {
+                    margin-top: 40px;
+                }
+
+                .form__grid-content {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                .form__grid-content.success .formResult {
+                    color: #FFA62B;
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+
+                .form__grid-content.error .formResult {
+                    color: #252B42;
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    &__secondary {
+        .container {
+            color: $page-bg;
+            width: 100%;
+            display: grid;
+            grid-template-areas: 'form_text actions';
+            justify-content: space-between;
+            padding: 40px 0;
+
+            @media screen and (max-width: 768px) {
+                gap: 50px;
+                padding: 40px;
+                max-width: 350px;
+                display: flex;
+            }
+        }
+
+        &__text {
+            grid-area: form_text;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @media screen and (max-width: 768px) {
+                max-width: 240px;
+            }
+
+            &__heading {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+                letter-spacing: 0.1px;
+                margin: 0;
+            }
+
+            &__subheading {
+                margin: 0;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+
+    .button,
+    .input__button {
+        border-radius: 5px;
+        padding: 15px 40px;
+        line-height: 28px;
+        font-size: 14px;
+        white-space: nowrap;
+        width: min-content;
+
+        @media screen and (max-width: 768px) {
+            width: 285px;
+        }
+    }
+}
