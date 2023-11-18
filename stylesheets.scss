@@ -324,114 +324,124 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .feedback {
     background-color: $page-bg;
-}
 
-.feedback .container__heading {
-    margin: 80px 0;
+    .container__heading {
+        margin: 80px 0;
+    
+        @media screen and (max-width: 768px) {
+            margin-bottom: 60px;
+        }
 
-    @media screen and (max-width: 768px) {
-        margin-bottom: 60px;
+        .heading__section {
+            text-transform: initial;
+        
+            @media screen and (max-width: 768px) {
+                max-width: 225px;
+            }
+        }
+
+        .paragraph__section {
+            @media screen and (max-width: 768px) {
+                max-width: 265px;
+            }
+        }
+    }
+
+    &__content {
+        color: black;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 325px 325px 325px;
+        grid-template-rows: 245px;
+        margin-bottom: 80px;
+    
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 325px;
+            grid-template-rows: 245px 245px 245px;
+            margin-bottom: 95px;
+        }
+
+        >div {
+            background-color: white;
+        }
+
+        .card {
+            padding: 30px 35px;
+            gap: 20px;
+            border-radius: 5px;
+        
+            @media screen and (max-width: 768px) {
+                gap: 10px;
+            }
+
+            &__stars {
+                .star__img {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+
+            &__content {
+                color: #737373;
+                font-weight: 600;
+                line-height: 24px;
+            }
+
+            .content__reviewer {
+                display: grid;
+                grid-template-columns: 50px 95px;
+                grid-template-rows: 10px 10px;
+                grid-template-areas: 'image link'
+                    'image profession';
+                column-gap: 15px;
+            
+                @media screen and (max-width: 768px) {
+                    grid-template-rows: 5px 5px;
+                }
+
+                .reviewer__img {
+                    grid-area: image;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .reviewer__link {
+                    grid-area: link;
+                    color: $btn-primary-bg;
+                    font-weight: 600;
+                    line-height: 24px;
+                }
+
+                .reviewer__profession {
+                    grid-area: profession;
+                    font-weight: 600;
+                    line-height: 24px;
+                }
+            }
+        }
     }
 }
 
-.feedback .heading__section {
-    text-transform: initial;
 
-    @media screen and (max-width: 768px) {
-        max-width: 225px;
-    }
-}
 
-.feedback .paragraph__section {
-    @media screen and (max-width: 768px) {
-        max-width: 265px;
-    }
-}
 
-.feedback__content {
-    color: black;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: 325px 325px 325px;
-    grid-template-rows: 245px;
-    margin-bottom: 80px;
 
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 325px;
-        grid-template-rows: 245px 245px 245px;
-        margin-bottom: 95px;
-    }
-}
 
-.feedback__content>div {
-    background-color: white;
-}
 
-.feedback .card {
-    padding: 30px 35px;
-    gap: 20px;
-    border-radius: 5px;
 
-    @media screen and (max-width: 768px) {
-        gap: 10px;
-    }
-}
 
-.star__img {
-    width: 22px;
-    height: 22px;
-}
 
-.feedback .card__content {
-    color: #737373;
-    font-weight: 600;
-    line-height: 24px;
-}
 
-.content__reviewer {
-    display: grid;
-    grid-template-columns: 50px 95px;
-    grid-template-rows: 10px 10px;
-    grid-template-areas: 'image link'
-        'image profession';
-    column-gap: 15px;
 
-    @media screen and (max-width: 768px) {
-        grid-template-rows: 5px 5px;
-    }
-}
 
-.reviewer__img {
-    grid-area: image;
-    width: 50px;
-    height: 50px;
-}
 
-.reviewer__link {
-    grid-area: link;
-    color: $btn-primary-bg;
-    font-weight: 600;
-    line-height: 24px;
-}
 
-.reviewer__profession {
-    grid-area: profession;
-    font-weight: 600;
-    line-height: 24px;
-}
+
+
+
+
 
 .team {
     background-color: $page-bg;
