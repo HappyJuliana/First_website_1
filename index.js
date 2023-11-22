@@ -73,4 +73,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
         formElements.forEach((item) => validateElement(item));
     }
+
+    const initMySlider = () => {
+        const width = 330;
+        const slidesPerView = 3;
+        let position = 0;
+        const slidesList = document.querySelector('.my-carousel__list');
+        const slides = document.querySelectorAll('.my-carousel__item');
+        const nextButton = document.querySelector('.my-carousel .arrow--next');
+        const prevButton = document.querySelector('.my-carousel .arrow--prev');
+
+        nextButton.addEventListener('click', nextClicked);
+        prevButton.addEventListener('click', prevClicked);
+
+        function nextClicked() {
+            position -= width * slidesPerView;
+            position = Math.max(position, -width * (slides.length - slidesPerView));
+            slidesList.style.marginLeft = position + 'px';
+        }
+
+        function prevClicked() {
+            position += width * slidesPerView;
+            position = Math.min(position, 0);
+            slidesList.style.marginLeft = position + 'px';
+        }
+    }
+
+    initMySlider();
+
 });
