@@ -1,0 +1,24 @@
+@import 'variables';
+
+.why-us {
+    background-color: $page-bg;
+
+    &__content {
+        color: black;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 330px 330px 330px;
+        grid-template-rows: 195px 195px;
+        margin-bottom: 100px;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 330px;
+            grid-template-rows: 195px;
+            margin-bottom: 70px;
+        }
+
+        >div {
+            background-color: white;
+        }
+    }
+}
