@@ -1,3 +1,11 @@
+// core version + navigation, pagination modules:
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const form = document.getElementById('appointment_form');
@@ -101,4 +109,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initMySlider();
 
+    var mySwiper = new Swiper(".swiper", {
+        modules: [Navigation, Pagination],
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    // Обработчик события изменения размера окна
+    window.addEventListener("resize", function () {
+        mySwiper.update(); // Обновление слайдера
+    });
 });
