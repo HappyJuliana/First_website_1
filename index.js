@@ -127,10 +127,71 @@ document.addEventListener('DOMContentLoaded', function () {
                 spaceBetween: 30,
             },
         },
+        //Local Storage
+        // Обработчик события смены слайда
+        on: {
+            slideChange: function () {
+                localStorage.setItem('currentSlide', mySwiper.activeIndex);
+            }
+        }               
     });
+
+    let savedSlide = localStorage.getItem('currentSlide');
+
+    if (savedSlide) {
+        mySwiper.slideTo(savedSlide);
+    }
 
     // Обработчик события изменения размера окна
     window.addEventListener("resize", function () {
         mySwiper.update(); // Обновление слайдера
     });
+
+
+    //Cookies
+    const setCookie = (name, value, daysToExpire) => {
+        let date = new Date();
+        date.setTime(date.getTime() + daysToExpire * 24 * 60 * 60 * 1000);
+        const expirationDate = date.toUTCString();
+        document.cookie = `${name}=${value}; expires=${expirationDate}`
+      }
+      
+      const getCookie = (name) => {
+        const cookies = document.cookie.split(';') 
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim() 
+          if (cookie.startsWith(name + '=')) {
+            return cookie.substring(name.length + 1) 
+          }
+        }
+        return null 
+      }
+      
+      const checkCookie = () => {
+        let user = getCookie("userData");
+        if (user !== null && user !== "") {
+            alert("Welcome again " + user.split(' ')[0]);
+        } else {
+            user = prompt("Please enter your username and password separated by a space:", "");
+            if (user !== "" && user !== null) {
+                setCookie("userData", user, 365);
+            }
+        }
+    }
+
+      checkCookie();  
+    
+
+    //Session Storage
+    const setSessionStorage = () => {
+        let currentDate = new Date();
+        let dateString = currentDate.toUTCString();
+
+        sessionStorage.setItem('accessDate', dateString);
+
+        let storedTime = sessionStorage.getItem('accessDate');
+        console.log("The time when user accessed our site: " + storedTime);
+    }
+
+    setSessionStorage();
 });
