@@ -26,34 +26,43 @@
     }
 
     &__content {
-        color: black;
-        display: grid;
-        gap: 30px;
-        grid-template-columns: 325px 325px 325px;
-        grid-template-rows: 370px;
-        margin-bottom: 80px;
 
-        @media screen and (max-width: 768px) {
-            grid-template-columns: 325px;
-            grid-template-rows: 370px 370px 370px;
-            margin-bottom: 95px;
+        color: black;
+        /* display: grid;
+           gap: 30px;
+           grid-template-columns: 325px 325px 325px;
+           grid-template-rows: 370px;
+           margin-bottom: 80px;
+   
+           @media screen and (max-width: 768px) {
+               grid-template-columns: 325px;
+               grid-template-rows: 370px 370px 370px;
+               margin-bottom: 95px;
+           }*/
+
+        .swiper {
+            width: 1050px;
+            margin-bottom: 80px;
         }
 
-        >div {
-            background-color: white;
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .card {
             padding: 0;
             gap: 0;
+            background-color: white;
+            width: 325px;
+            height: 370px;
 
             &__photo {
                 width: 325px;
                 height: 230px;
-
-                @media screen and (max-width: 768px) {
-                    max-width: 285px;
-                }
             }
 
             &__info {

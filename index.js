@@ -1,3 +1,11 @@
+// core version + navigation, pagination modules:
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const form = document.getElementById('appointment_form');
@@ -73,4 +81,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
         formElements.forEach((item) => validateElement(item));
     }
+
+    const initMySlider = () => {
+        const width = 330;
+        const slidesPerView = 3;
+        let position = 0;
+        const slidesList = document.querySelector('.my-carousel__list');
+        const slides = document.querySelectorAll('.my-carousel__item');
+        const nextButton = document.querySelector('.my-carousel .arrow--next');
+        const prevButton = document.querySelector('.my-carousel .arrow--prev');
+
+        nextButton.addEventListener('click', nextClicked);
+        prevButton.addEventListener('click', prevClicked);
+
+        function nextClicked() {
+            position -= width * slidesPerView;
+            position = Math.max(position, -width * (slides.length - slidesPerView));
+            slidesList.style.marginLeft = position + 'px';
+        }
+
+        function prevClicked() {
+            position += width * slidesPerView;
+            position = Math.min(position, 0);
+            slidesList.style.marginLeft = position + 'px';
+        }
+    }
+
+    initMySlider();
+
+    var mySwiper = new Swiper(".swiper", {
+        modules: [Navigation, Pagination],
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    // Обработчик события изменения размера окна
+    window.addEventListener("resize", function () {
+        mySwiper.update(); // Обновление слайдера
+    });
 });

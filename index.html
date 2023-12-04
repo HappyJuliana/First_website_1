@@ -7,7 +7,7 @@
     <title>KMarketer</title>
     <link rel="stylesheet" href="css\stylesheets.scss">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-   <!--- <style>
+    <!--- <style>
         body {
             --page-bg: #252B42;
             --btn-primary-bg: #FFA62B;
@@ -901,7 +901,7 @@
             color: var(--footer-nav-link-color);
         }
     </style>-->
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </head>
 
 <body>
@@ -1019,6 +1019,8 @@
                 <source src="videos/vertical.mp4" type="video/ogg">
             </video>
 
+        </div>
+
     </section>
 
     <section class="feedback">
@@ -1032,59 +1034,234 @@
 
             <div class="feedback__content">
 
-                <div class="card">
-                    <div class="card__stars">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                <div class="content--mobile">
+                    <div class="card">
+                        <div class="card__stars">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                        </div>
+
+                        <p class="card__content">Slate helps you see how many more days you need to work to reach your
+                            financial goal.</p>
+                        <div class="content__reviewer">
+                            <img class="reviewer__img" src="icons/girl.svg" alt="girl icon">
+                            <a class="reviewer__link" href="#">Regina Miles</a>
+                            <p class="reviewer__profession">Designer</p>
+                        </div>
                     </div>
 
-                    <p class="card__content">Slate helps you see how many more days you need to work to reach your
-                        financial goal.</p>
-                    <div class="content__reviewer">
-                        <img class="reviewer__img" src="icons/girl.svg" alt="girl icon">
-                        <a class="reviewer__link" href="#">Regina Miles</a>
-                        <p class="reviewer__profession">Designer</p>
+                    <div class="card">
+                        <div class="card__stars">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                        </div>
+
+                        <p class="card__content">Slate helps you see how many more days you need to work to reach your
+                            financial goal.</p>
+                        <div class="content__reviewer">
+                            <img class="reviewer__img" src="icons/woman.svg" alt="woman icon">
+                            <a class="reviewer__link" href="#">Regina Miles</a>
+                            <p class="reviewer__profession">Designer</p>
+                        </div>
                     </div>
+
+                    <div class="card">
+                        <div class="card__stars">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\star.svg" class="star__img" alt="full star icon">
+                            <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                        </div>
+
+                        <p class="card__content">Slate helps you see how many more days you need to work to reach your
+                            financial goal.</p>
+                        <div class="content__reviewer">
+                            <img class="reviewer__img" src="icons/man.svg" alt="man icon">
+                            <a class="reviewer__link" href="#">Regina Miles</a>
+                            <p class="reviewer__profession">Designer</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <div class="card__stars">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
-                    </div>
+                <div class="my-carousel">
+                    <button class="arrow arrow--prev">&#8592;</button>
+                    <div class="my-carousel__wrapper">
+                        <ul class="my-carousel__list">
+                            <li class="my-carousel__item">
+                                <div class="card">
+                                    <div class="card__stars">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                                    </div>
 
-                    <p class="card__content">Slate helps you see how many more days you need to work to reach your
-                        financial goal.</p>
-                    <div class="content__reviewer">
-                        <img class="reviewer__img" src="icons/woman.svg" alt="woman icon">
-                        <a class="reviewer__link" href="#">Regina Miles</a>
-                        <p class="reviewer__profession">Designer</p>
+                                    <p class="card__content">Slate helps you see how many more days you need to work to
+                                        reach your
+                                        financial goal.</p>
+                                    <div class="content__reviewer">
+                                        <img class="reviewer__img" src="icons/girl.svg" alt="girl icon">
+                                        <a class="reviewer__link" href="#">Regina Miles</a>
+                                        <p class="reviewer__profession">Designer 1</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-carousel__item">
+                                <div class="card">
+                                    <div class="card__stars">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                                    </div>
+
+                                    <p class="card__content">Slate helps you see how many more days you need to work to
+                                        reach your
+                                        financial goal.</p>
+                                    <div class="content__reviewer">
+                                        <img class="reviewer__img" src="icons/woman.svg" alt="woman icon">
+                                        <a class="reviewer__link" href="#">Regina Miles</a>
+                                        <p class="reviewer__profession">Designer 2</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-carousel__item">
+                                <div class="card">
+                                    <div class="card__stars">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                                    </div>
+
+                                    <p class="card__content">Slate helps you see how many more days you need to work to
+                                        reach your
+                                        financial goal.</p>
+                                    <div class="content__reviewer">
+                                        <img class="reviewer__img" src="icons/man.svg" alt="man icon">
+                                        <a class="reviewer__link" href="#">Regina Miles</a>
+                                        <p class="reviewer__profession">Designer 3</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-carousel__item">
+                                <div class="card">
+                                    <div class="card__stars">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                                    </div>
+
+                                    <p class="card__content">Slate helps you see how many more days you need to work to
+                                        reach your
+                                        financial goal.</p>
+                                    <div class="content__reviewer">
+                                        <img class="reviewer__img" src="icons/girl.svg" alt="girl icon">
+                                        <a class="reviewer__link" href="#">Regina Miles</a>
+                                        <p class="reviewer__profession">Designer 4</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-carousel__item">
+                                <div class="card">
+                                    <div class="card__stars">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                                    </div>
+
+                                    <p class="card__content">Slate helps you see how many more days you need to work to
+                                        reach your
+                                        financial goal.</p>
+                                    <div class="content__reviewer">
+                                        <img class="reviewer__img" src="icons/woman.svg" alt="woman icon">
+                                        <a class="reviewer__link" href="#">Regina Miles</a>
+                                        <p class="reviewer__profession">Designer 5</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-carousel__item">
+                                <div class="card">
+                                    <div class="card__stars">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                                    </div>
+
+                                    <p class="card__content">Slate helps you see how many more days you need to work to
+                                        reach your
+                                        financial goal.</p>
+                                    <div class="content__reviewer">
+                                        <img class="reviewer__img" src="icons/man.svg" alt="man icon">
+                                        <a class="reviewer__link" href="#">Regina Miles</a>
+                                        <p class="reviewer__profession">Designer 6</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-carousel__item">
+                                <div class="card">
+                                    <div class="card__stars">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                                    </div>
+
+                                    <p class="card__content">Slate helps you see how many more days you need to work to
+                                        reach your
+                                        financial goal.</p>
+                                    <div class="content__reviewer">
+                                        <img class="reviewer__img" src="icons/girl.svg" alt="girl icon">
+                                        <a class="reviewer__link" href="#">Regina Miles</a>
+                                        <p class="reviewer__profession">Designer 7</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-carousel__item">
+                                <div class="card">
+                                    <div class="card__stars">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\star.svg" class="star__img" alt="full star icon">
+                                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
+                                    </div>
+
+                                    <p class="card__content">Slate helps you see how many more days you need to work to
+                                        reach your
+                                        financial goal.</p>
+                                    <div class="content__reviewer">
+                                        <img class="reviewer__img" src="icons/woman.svg" alt="woman icon">
+                                        <a class="reviewer__link" href="#">Regina Miles</a>
+                                        <p class="reviewer__profession">Designer 8</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
+                    <button class="arrow arrow--next">&#8594;</button>
                 </div>
+            </div>
+        </div>
 
-                <div class="card">
-                    <div class="card__stars">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\star.svg" class="star__img" alt="full star icon">
-                        <img src="icons\empty-star.svg" class="star__img" alt="empty star icon">
-                    </div>
-
-                    <p class="card__content">Slate helps you see how many more days you need to work to reach your
-                        financial goal.</p>
-                    <div class="content__reviewer">
-                        <img class="reviewer__img" src="icons/man.svg" alt="man icon">
-                        <a class="reviewer__link" href="#">Regina Miles</a>
-                        <p class="reviewer__profession">Designer</p>
-                    </div>
-                </div>
     </section>
 
     <section class="team">
@@ -1097,6 +1274,7 @@
             </div>
 
             <div class="team__content">
+              <!--  <div class="content--mobile">
 
                 <div class="card">
                     <img class="card__photo" src="img/Ashley.png" alt="A woman named Ashley Fletcher">
@@ -1163,7 +1341,212 @@
                         </ul>
                     </div>
                 </div>
+
+           </div> -->
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img class="card__photo" src="img/Ashley.png" alt="A woman named Ashley Fletcher">
+                                <div class="card__info">
+                                    <h5 class="info__header">Ashley Fletcher</h5>
+                                    <p class="info__subheader">CEO 1</p>
+                                    <ul class="info__social-media">
+                                        <li>
+                                            <a href="#"><img src="icons/facebook_light-blue.svg" class="social-media__icon"
+                                                    alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/instagram_light-blue.svg" class="social-media__icon"
+                                                    alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/twitter_light-blue.svg" class="social-media__icon"
+                                                    alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img class="card__photo" src="img/Ashley.png" alt="A woman named Rodney Stratton">
+                                <div class="card__info">
+                                    <h5 class="info__header">Rodney Stratton</h5>
+                                    <p class="info__subheader">Consultant 2</p>
+                                    <ul class="info__social-media">
+                                        <li>
+                                            <a href="#"><img src="icons/facebook_light-blue.svg" class="social-media__icon"
+                                                    alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/instagram_light-blue.svg" class="social-media__icon"
+                                                    alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/twitter_light-blue.svg" class="social-media__icon"
+                                                    alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img class="card__photo" src="img/Avie.png" alt="A man named Avie Beaton">
+                                <div class="card__info">
+                                    <h5 class="info__header">Avie Beaton</h5>
+                                    <p class="info__subheader">CO Founder 3</p>
+                                    <ul class="info__social-media">
+                                        <li>
+                                            <a href="#"><img src="icons/facebook_light-blue.svg" class="social-media__icon"
+                                                    alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/instagram_light-blue.svg" class="social-media__icon"
+                                                    alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/twitter_light-blue.svg" class="social-media__icon"
+                                                    alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img class="card__photo" src="img/Ashley.png" alt="A woman named Ashley Fletcher">
+                                <div class="card__info">
+                                    <h5 class="info__header">Ashley Fletcher</h5>
+                                    <p class="info__subheader">CEO 4</p>
+                                    <ul class="info__social-media">
+                                        <li>
+                                            <a href="#"><img src="icons/facebook_light-blue.svg" class="social-media__icon"
+                                                    alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/instagram_light-blue.svg" class="social-media__icon"
+                                                    alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/twitter_light-blue.svg" class="social-media__icon"
+                                                    alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img class="card__photo" src="img/Ashley.png" alt="A woman named Rodney Stratton">
+                                <div class="card__info">
+                                    <h5 class="info__header">Rodney Stratton</h5>
+                                    <p class="info__subheader">Consultant 5</p>
+                                    <ul class="info__social-media">
+                                        <li>
+                                            <a href="#"><img src="icons/facebook_light-blue.svg" class="social-media__icon"
+                                                    alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/instagram_light-blue.svg" class="social-media__icon"
+                                                    alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/twitter_light-blue.svg" class="social-media__icon"
+                                                    alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img class="card__photo" src="img/Avie.png" alt="A man named Avie Beaton">
+                                <div class="card__info">
+                                    <h5 class="info__header">Avie Beaton</h5>
+                                    <p class="info__subheader">CO Founder 6</p>
+                                    <ul class="info__social-media">
+                                        <li>
+                                            <a href="#"><img src="icons/facebook_light-blue.svg" class="social-media__icon"
+                                                    alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/instagram_light-blue.svg" class="social-media__icon"
+                                                    alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/twitter_light-blue.svg" class="social-media__icon"
+                                                    alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>          
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img class="card__photo" src="img/Ashley.png" alt="A woman named Ashley Fletcher">
+                                <div class="card__info">
+                                    <h5 class="info__header">Ashley Fletcher</h5>
+                                    <p class="info__subheader">CEO 7</p>
+                                    <ul class="info__social-media">
+                                        <li>
+                                            <a href="#"><img src="icons/facebook_light-blue.svg" class="social-media__icon"
+                                                    alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/instagram_light-blue.svg" class="social-media__icon"
+                                                    alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/twitter_light-blue.svg" class="social-media__icon"
+                                                    alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img class="card__photo" src="img/Ashley.png" alt="A woman named Rodney Stratton">
+                                <div class="card__info">
+                                    <h5 class="info__header">Rodney Stratton</h5>
+                                    <p class="info__subheader">Consultant 8</p>
+                                    <ul class="info__social-media">
+                                        <li>
+                                            <a href="#"><img src="icons/facebook_light-blue.svg" class="social-media__icon"
+                                                    alt="Facebook"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/instagram_light-blue.svg" class="social-media__icon"
+                                                    alt="Instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icons/twitter_light-blue.svg" class="social-media__icon"
+                                                    alt="Twitter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>             
+                    </div>
+
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
             </div>
+
         </div>
     </section>
 
